@@ -120,7 +120,7 @@
     right: 30px;
 }
 .ticket .ticketimg{
-    width: 450px;
+    width: 400px;
     height: 400px;
 }
 .ticket:hover {
@@ -131,8 +131,10 @@
 
 .ticket .ticket-text{
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 50%;
+    font-size: 25px;
+    font-weight: bolder;
     transform: translate( -50%, -50% );
 }
 
