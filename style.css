@@ -1,0 +1,148 @@
+body {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+.nav-tabs-box {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  width: 1320px;
+  overflow: hidden;
+}
+.nav-tabs-box .nav-link {
+  border: none;
+  color: #495057;
+  background-color: transparent;
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+.nav-tabs-box .nav-link.active {
+  color: #007bff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+.custom-box {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  height: 600px;
+}
+
+.wrap {
+  width: 1320px;
+  height: 600px;
+  margin: 150px auto 200px auto;
+}
+
+.youngsucard {
+  background-color: #fbbd99;
+}
+
+.card {
+  width: 310px;
+  height: 470px;
+  border: 2px solid black;
+  box-shadow: 10px 10px;
+  margin-top: 48px;
+  margin-left: 48px;
+}
+.wrap2 {
+  display: flex;
+  margin-top: 8px;
+  margin-left: 24px;
+}
+.wrap3 {
+  width: 800px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  margin-left: 48px;
+}
+
+.youngsuprofile > h2 {
+  font-weight: bolder;
+  margin-left: 16px;
+}
+
+.youngsuprofile > p {
+  margin-left: 16px;
+}
+
+.profileimage {
+  width: 300px;
+  height: 240px;
+  margin-bottom: 16px;
+}
+.wrap3-2{
+  display: flex;
+  flex-direction: row;
+  width: 790px;
+  height: 250px;
+}
+.wrap3-2 .youngsumbti {
+  width: 310px;
+  height: 250px;
+  background-color: #00e3c8;
+  box-shadow: 10px 10px;
+}
+
+.youngsumbti .mbtibox {
+  margin: 30px 60px;
+}
+.youngsumbti p {
+  font-size: 100px;
+  font-weight: bolder;
+}
+
+.youngsumbti .mbtilayout {
+  width: 310px;
+  height: 20px;
+  background-color: rgb(050, 050, 050);
+  padding-bottom: 30px;
+}
+
+.mbtilayout img {
+  width: 10px;
+  height: 10px;
+}
+
+.wrap3-2 .youngsuproscons{
+  background-color: white;
+  width: 470px;
+  height: 260px;
+  box-shadow: 10px 10px;
+  margin-left: 48px;
+}
+
+.youngsuproscons {
+  padding: 10px;
+}
+
+.youngsustyle {
+  background-color: white;
+  width: 755px;
+  height: 180px;
+  box-shadow: 10px 10px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.role {
+  position: relative
+}
+
+.role > img {
+  width: 300px;
+  height: 150px;
+  margin-top: 90px;
+  margin-left: 110px;
+}
+
+.roletext {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  text-align: center;
+  color: black
+}

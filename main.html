@@ -1,170 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Tabs Example</title>
-    <!-- 부트스트랩 CSS 링크 -->
-    <!-- <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    /> -->
-    <style>
-      body {
-        background-color: #f8f9fa;
-        padding: 20px;
-      }
 
-      header {
-        width: 1320px;
-        height: 700px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Tabs Example</title>
+  <!-- 부트스트랩 CSS 링크 -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      .nav-tabs-box {
-        position: relative;
-        top: 10px;
-      }
-
-      .nav-tabs-box ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100px;
-        display: flex;
-      }
-
-      .nav-tabs-box li {
-        list-style-type: none;
-        width: 100%;
-        height: 100%;
-      }
-
-      .nav-tabs-box .nav-link {
-        position: relative;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-size: 32px;
-        height: 100%;
-        width: 100%;
-        border: 4px solid #2d2d2d;
-        color: #495057;
-        background-color: white;
-        border-radius: 0;
-      }
-
-      .nav-tabs-box .nav-link.active {
-        color: #007bff;
-        border-bottom: none;
-      }
-
-      .custom-box {
-        box-sizing: border-box;
-        width: 1320px;
-        height: 600px;
-        padding: 20px;
-        background-color: #fff;
-        border: 4px solid #2d2d2d;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="nav-tabs-box">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="#"
-              onclick="openTab('tab1')"
-              >Tab 1</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab2')">Tab 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab3')">Tab 3</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab5')">Tab 5</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab7')">Tab 7</a>
-          </li>
-        </ul>
+<body>
+  <div class="wrap">
+    <div class="nav-tabs-box">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" onclick="openTab('tab1')">Tab 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="openTab('tab2')">Tab 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="openTab('tab3')">Tab 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="openTab('tab5')">Tab 5</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="openTab('tab7')">Tab 7</a>
+        </li>
+      </ul>
+    </div>
+    <article id="tab1" class="custom-box youngsucard" style="display: none;">
+      <div class="wrap2">
+        <div class="card">
+          <div class="image-box">
+            <img
+              src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2016%2F10%2F09%2F15%2F21%2Fbusiness-man-1725976_1280.png&type=a340"
+              class="profileimage" alt="">
+          </div>
+          <div class="youngsuprofile">
+            <h2>박영수</h2>
+            <p>2000년 05월 30일</p>
+          </div>
+        </div>
+        <div class="wrap3">
+          <div class="wrap3-2">
+            <div class="youngsumbti">
+              <div class="mbtilayout">
+                <img src="./img/1.png">
+                <img src="./img/2.png">
+                <img src="./img/3.png">
+              </div>
+              <div class="mbtibox">
+                <p>ISTJ</p>
+              </div>
+            </div>
+            <div class="youngsuproscons">
+              <h4>Advantage</h4>
+              <p>He listens to the other person well, keeps his time and promises well,
+                and has a heavy mouth, so he never tells other people the secret stories of his acquaintances.</p>
+              <h4>Weakness</h4>
+              <p>He is shy and doesn't talk much, and he is a type of person who understands certain
+                information better when confronted than when he understands it with his head.</p>
+            </div>
+          </div>
+          <div class="youngsustyle">
+            <h4>Collaboration Style</h4>
+            <p>Always be careful not to cause a fight between team members, so the other person talks as best as
+              possible without feeling bad,
+              and when a problem arises, they do not try to solve it alone, but with the help of team members.</p>
+          </div>
+        </div>
       </div>
-
-      <div id="tab1" class="custom-box">
-        <h3>Tab 1 Content</h3>
-        <p>This is the content of Tab 1.</p>
+      <div class="role">
+        <img src="./img/Group 13.png">
+        <h6 class="roletext">호응 담당</h6>
       </div>
+    </article>
 
-      <div id="tab2" class="custom-box" style="display: none">
-        <h3>Tab 2 Content</h3>
-        <p>This is the content of Tab 2.</p>
-      </div>
 
-      <div id="tab3" class="custom-box" style="display: none">
-        <h3>Tab 3 Content</h3>
-        <p>This is the content of Tab 3.</p>
-      </div>
+    <div id="tab2" class="custom-box" style="display: none;">
+      <h3>Tab 2 Content</h3>
+      <p>This is the content of Tab 2.</p>
+    </div>
 
-      <div id="tab4" class="custom-box" style="display: none">
-        <h3>Tab 4 Content</h3>
-        <p>This is the content of Tab 4.</p>
-      </div>
+    <div id="tab3" class="custom-box" style="display: none;">
+      <h3>Tab 3 Content</h3>
+      <p>This is the content of Tab 3.</p>
+    </div>
 
-      <div id="tab5" class="custom-box" style="display: none">
-        <h3>Tab 5 Content</h3>
-        <p>This is the content of Tab 5.</p>
-      </div>
+    <div id="tab4" class="custom-box" style="display: none;">
+      <h3>Tab 4 Content</h3>
+      <p>This is the content of Tab 4.</p>
+    </div>
 
-      <div id="tab6" class="custom-box" style="display: none">
-        <h3>Tab 6 Content</h3>
-        <p>This is the content of Tab 6.</p>
-      </div>
+    <div id="tab5" class="custom-box" style="display: none;">
+      <h3>Tab 5 Content</h3>
+      <p>This is the content of Tab 5.</p>
+    </div>
 
-      <div id="tab7" class="custom-box" style="display: none">
-        <h3>Tab 7 Content</h3>
-        <p>This is the content of Tab 7.</p>
-      </div>
-    </header>
+    <div id="tab6" class="custom-box" style="display: none;">
+      <h3>Tab 6 Content</h3>
+      <p>This is the content of Tab 6.</p>
+    </div>
 
-    <!-- 부트스트랩 JS 및 jQuery 라이브러리 링크
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <div id="tab7" class="custom-box" style="display: none;">
+      <h3>Tab 7 Content</h3>
+      <p>This is the content of Tab 7.</p>
+    </div>
+  </div>
 
-    <script>
-      // JavaScript로 탭을 관리
-      function openTab(tabName) {
-        // 모든 탭 숨기기
-        var tabs = document.getElementsByClassName("custom-box");
-        for (var i = 0; i < tabs.length; i++) {
-          tabs[i].style.display = "none";
-        }
-        // 선택한 탭 표시
-        document.getElementById(tabName).style.display = "block";
+  <!-- 부트스트랩 JS 및 jQuery 라이브러리 링크 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // JavaScript로 탭을 관리
+    function openTab(tabName) {
+      // 모든 탭 숨기기
+      var tabs = document.getElementsByClassName("custom-box");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
       }
-      let btns = document.querySelectorAll(".nav-link");
-      btns.forEach((selectedBtn) => {
-        selectedBtn.addEventListener("click", (e) => {
-          btns.forEach((btn) => {
-            btn.classList.remove("active");
-          });
-          selectedBtn.classList.add("active");
-        });
-      });
-    </script>
-  </body>
+      // 선택한 탭 표시
+      document.getElementById(tabName).style.display = "block";
+    }
+    
+  </script>
+
+</body>
+
 </html>
