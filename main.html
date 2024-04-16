@@ -1,220 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Tabs Example</title>
     <link rel="stylesheet" href="chaesu.css">
 
-   
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
         * {
             font-family: "Noto Sans KR", sans-serif;
         }
 
 
-      body {
-        background-color: #f8f9fa;
-        padding: 20px;
-      }
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
 
-      header {
-        width: 1320px; 
-        height: 600px;
-      }
+        header {
+            width: 1320px;
+            height: 600px;
+        }
 
-      .nav-tabs-box {
-        position: relative;
-        top: 10px;
-      }
+        .nav-tabs-box {
+            position: relative;
+            top: 10px;
+        }
 
-      .nav-tabs-box ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100px;
-        display: flex;
-      }
+        .nav-tabs-box ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
 
-      .nav-tabs-box li {
-        list-style-type: none;
-        width: 100%;
-        height: 100%;
-      }
+        .nav-tabs-box li {
+            list-style-type: none;
+            width: 100%;
+            height: 100%;
+        }
 
-      .nav-tabs-box .nav-link {
-        position: relative;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-size: 32px;
-        height: 100%;
-        width: 100%;
-        border: 4px solid #2d2d2d;
-        color: #495057;
-        background-color: white;
-        border-radius: 0;
-      }
+        .nav-tabs-box .nav-link {
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 32px;
+            height: 100%;
+            width: 100%;
+            border: 4px solid #2d2d2d;
+            color: #495057;
+            background-color: white;
+            border-radius: 0;
+        }
 
-      .nav-link.tab5{
-        background-color: #6A88BE;
-      }
+        .nav-link.tab5 {
+            background-color: #6A88BE;
+        }
 
-      .nav-tabs-box .nav-link.active {
-        color: #333;
-        border-bottom: none;
-      }
+        .nav-tabs-box .nav-link.active {
+            color: #fff;
+            border-bottom: none;
+        }
 
-      .custom-box {
-        box-sizing: border-box;
-        width: 1320px;
-        height: 600px;
-        padding: 20px;
-        background-color: #fff;
-        border: 4px solid #2d2d2d;
-      }
+        .custom-box {
+            box-sizing: border-box;
+            width: 1320px;
+            height: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border: 4px solid #2d2d2d;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div class="nav-tabs-box">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="#"
-              onclick="openTab('tab1')"
-              >Tab 1</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab2')">Tab 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab3')">Tab 3</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link tab5" href="#" onclick="openTab('tab5')">채수</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab7')">Tab 7</a>
-          </li>
-        </ul>
-      </div>
+        <div class="nav-tabs-box">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" onclick="openTab('tab1')">Tab 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="openTab('tab2')">Tab 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="openTab('tab3')">Tab 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab5" href="#" onclick="openTab('tab5')">채수</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="openTab('tab7')">Tab 7</a>
+                </li>
+            </ul>
+        </div>
 
-      <div id="tab1" class="custom-box">
-        <h3>Tab 1 Content</h3>
-        <p>This is the content of Tab 1.</p>
-      </div>
+        <div id="tab1" class="custom-box">
+            <h3>Tab 1 Content</h3>
+            <p>This is the content of Tab 1.</p>
+        </div>
 
-      <div id="tab2" class="custom-box" style="display: none">
-        <h3>Tab 2 Content</h3>
-        <p>This is the content of Tab 2.</p>
-      </div>
+        <div id="tab2" class="custom-box" style="display: none">
+            <h3>Tab 2 Content</h3>
+            <p>This is the content of Tab 2.</p>
+        </div>
 
-      <div id="tab3" class="custom-box" style="display: none">
-        <h3>Tab 2 Content</h3>
-        <p>This is the content of Tab 2.</p>
-      </div>
+        <div id="tab3" class="custom-box" style="display: none">
+            <h3>Tab 2 Content</h3>
+            <p>This is the content of Tab 2.</p>
+        </div>
 
-      <div id="tab4" class="custom-box" style="display: none">
-        <h3>Tab 4 Content</h3>
-        <p>This is the content of Tab 4.</p>
-      </div>
+        <div id="tab4" class="custom-box" style="display: none">
+            <h3>Tab 4 Content</h3>
+            <p>This is the content of Tab 4.</p>
+        </div>
 
-      <article id="tab5" class="custom-box chaesu-card" style="display: none">
-        <div class="info-wrap">
-            <div class="card">
-                <div class="image-box">
-                    <svg width="304" height="240" viewBox="0 0 334 352" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M216.4 8.00031C214.8 8.66697 212.533 11.3336 211.467 14.0003C210.4 16.5336 208 19.3336 206.133 20.267C204.133 21.067 202.667 22.267 202.667 22.9336C202.667 23.467 200.667 26.267 198.133 29.067C195.6 31.7336 193.333 35.467 193.2 37.3336C192.8 39.6003 191.067 41.3336 187.6 43.067C183.6 44.9336 182.533 46.1336 182.933 48.4003C183.2 50.4003 182.267 52.0003 179.6 53.7336C177.6 54.9336 175.333 57.467 174.8 59.2003C174.133 60.9336 172.533 62.667 171.467 63.067C170.267 63.6003 169.333 64.5336 169.333 65.2003C169.333 66.0003 166.533 69.467 163.067 72.9336C159.733 76.4003 155.333 82.9336 153.333 87.3336C150.133 94.4003 148.8 95.867 141.867 99.7336C136 103.067 132.8 106 129.733 111.067C127.333 114.934 125.333 119.334 125.333 120.934C125.333 124.667 120.8 129.867 111.333 137.334C95.1998 149.867 93.3332 151.867 93.3332 157.2C93.3332 160.934 92.1332 163.467 87.5998 168.667C84.5332 172.4 80.9332 177.6 79.7332 180.267C78.2665 183.334 74.1332 187.867 69.1998 191.6C63.8665 195.734 59.9998 200 58.1332 203.867C56.5332 207.334 52.9332 211.6 49.7332 213.867C46.6665 216.134 41.8665 220.934 39.1998 224.667C36.3998 228.267 32.5332 233.067 30.3998 235.067C28.3998 237.2 26.6665 240 26.6665 241.334C26.6665 244.134 17.5998 256 8.39984 265.067C3.0665 270.534 2.6665 271.467 2.6665 278C2.6665 285.734 4.79984 289.334 9.59984 289.334C11.0665 289.334 13.9998 290.534 16.1332 292C20.7998 295.334 22.6665 294.534 29.9998 286.4C32.9332 283.2 37.0665 279.467 39.4665 278C41.8665 276.534 47.1998 273.067 51.1998 270.134C55.3332 267.334 61.1998 264.534 64.3998 263.734C71.0665 262.267 81.9998 263.467 84.5332 266.134C87.3332 268.8 88.5332 284 86.7998 291.6C85.9998 295.067 84.9332 302.534 84.5332 308C84.1332 313.467 83.3332 318.534 82.7998 319.334C82.1332 320 81.3332 322.534 80.9332 324.8C79.5998 331.867 89.5998 342.667 97.4665 342.667C101.6 342.667 105.333 338.934 105.333 334.8C105.333 333.067 108.4 328.4 112.8 323.467C120.4 314.934 122.667 311.467 132 292.4C139.2 278 146.133 270.4 156.4 265.467C160.933 263.334 165.733 261.2 166.933 260.8C168.133 260.4 170.667 257.867 172.533 255.067C174.267 252.267 180.667 244.934 186.8 238.667C192.8 232.4 200.533 224 203.733 220C207.067 216 214.4 207.6 219.867 201.334C225.467 195.067 231.733 187.734 233.733 185.067C235.733 182.267 240.4 177.067 244 173.6C247.733 170 250.667 166.534 250.667 166C250.667 164.267 266.533 149.467 270.667 147.334C272.933 146.134 275.067 144.4 275.467 143.334C275.867 142.267 277.6 141.067 279.067 140.534C282.533 139.467 290.667 130.4 292.8 125.334C295.333 119.334 309.333 104.667 313.067 104C315.067 103.6 317.2 102.134 318 100.667C318.8 99.2003 321.6 95.7336 324.4 92.9336C330.267 86.8003 330.667 83.2003 325.733 81.067C323.6 80.267 320.133 78.667 317.867 77.6003C313.867 75.7336 313.2 75.7336 306.8 78.5336C302.933 80.1336 298 81.6003 295.6 81.867C291.733 82.267 266.667 96.1336 258.533 102.534C255.333 105.067 254.8 105.067 249.2 103.067C245.467 101.867 240.933 101.334 236.667 101.867C230.267 102.534 229.733 102.267 223.6 96.667L217.2 90.8003L221.467 86.1336C223.733 83.467 225.333 80.4003 225.067 79.067C224.533 75.867 216.933 73.867 212.667 75.7336C207.067 78.267 208.533 73.7336 218.133 57.867C223.067 49.867 228.267 41.3336 229.6 38.9336C231.6 35.7336 232 33.3336 231.467 30.0003C230.8 26.8003 231.2 24.4003 232.667 22.4003C235.467 18.267 235.2 15.467 231.733 11.3336C228.4 7.60031 221.2 6.00031 216.4 8.00031ZM228.533 16.267C228.8 17.867 228.133 20.5336 227.067 22.267C225.333 24.9336 225.2 26.4003 226.267 29.467C227.6 33.067 227.067 34.4003 218.667 47.867C208.133 64.667 204 72.4003 204 75.3336C204 76.4003 202.533 78.667 200.667 80.267C198.8 81.867 197.333 83.6003 197.333 84.267C197.333 86.5336 201.333 86.9336 203.467 84.8003C204.533 83.6003 206.133 82.9336 206.8 83.3336C207.467 83.867 209.333 83.2003 210.933 82.1336C213.733 80.1336 218.667 79.2003 218.667 80.667C218.667 80.9336 217.2 83.467 215.333 86.1336C213.467 88.8003 212 91.467 212 91.867C212 92.4003 215.867 96.1336 220.667 100.267L229.2 107.734L237.733 107.067C242.4 106.667 247.333 106.934 248.667 107.6C250.667 108.8 250.267 109.334 245.867 111.6C242.267 113.467 239.6 116.134 237.333 120.8C235.467 124.4 232.8 129.2 231.333 131.6C230 134 229.2 136.4 229.867 136.934C231.733 138.8 235.067 135.2 239.867 126.134C243.467 119.467 245.867 116.534 248.933 115.334C251.2 114.4 255.333 111.467 258.133 108.934C261.067 106.534 266.4 102.667 270 100.667C273.733 98.667 280.267 94.667 284.667 92.0003C289.067 89.2003 294.8 86.8003 297.333 86.4003C299.867 86.0003 304.8 84.667 308.267 83.2003C314 81.067 314.8 80.9336 316.933 82.9336C318.267 84.1336 320.533 85.3336 322 85.6003C324.267 86.0003 323.6 87.067 317.6 93.067C313.867 96.8003 309.867 100 308.933 100C306.933 100 291.2 117.867 288 123.734C284.667 130 280.8 134.134 276.267 136.534C273.867 137.734 272 139.334 272 140C272 140.8 269.333 142.667 266 144.267C262.667 145.867 260 147.734 260 148.4C260 149.067 256.8 152.8 253.067 156.667C244.133 165.6 231.333 179.734 228.4 184C227.2 185.867 221.6 192.4 216 198.667C210.4 204.934 203.067 213.334 199.733 217.334C196.4 221.334 188.133 230.4 181.467 237.334C174.8 244.267 169.067 251.067 168.667 252.267C168.267 253.467 162.933 256.934 156.8 259.867C143.2 266.4 136.133 273.734 128.8 288.8C126 294.534 122.267 301.2 120.533 303.6C118.8 305.867 117.333 308.667 117.333 309.734C117.333 310.8 113.733 315.6 109.333 320.4C104.933 325.2 101.333 330.134 101.333 331.334C101.333 334.134 98.9332 338.667 97.4665 338.667C95.4665 338.667 85.3332 329.067 85.3332 327.067C85.3332 326 86.2665 323.467 87.3332 321.2C88.5332 319.067 89.5998 312.667 89.8665 306.8C90.1332 300.934 91.0665 294 91.9998 291.334C93.5998 286.534 93.3332 280.134 91.0665 268.8C89.5998 261.334 84.7998 258.934 71.9998 258.8C64.6665 258.8 60.5332 259.467 56.6665 261.334C47.7332 265.734 34.3998 275.334 27.3332 282.667L20.6665 289.6L16.7998 286.534C14.7998 284.934 11.8665 283.6 10.2665 283.467C7.8665 283.334 7.19984 282.4 6.93317 278.667C6.6665 274.8 7.33317 273.2 10.6665 270C17.8665 262.934 30.6665 246.534 30.6665 244.267C30.6665 243.067 33.1998 239.334 36.1332 236C39.1998 232.667 43.3332 227.467 45.4665 224.4C47.5998 221.334 50.3998 218.534 51.7332 218C55.1998 216.934 59.9998 211.6 62.5332 206C63.7332 203.467 68.2665 198.534 72.5332 195.067C77.0665 191.334 81.8665 186.134 83.5998 182.667C85.3332 179.334 88.1332 175.2 89.8665 173.334C95.1998 167.467 97.3332 163.467 97.3332 159.2C97.3332 154.667 98.1332 153.867 114.8 140.667C126.267 131.6 127.6 129.867 129.733 122.667C132.267 113.867 137.6 107.6 146.133 102.667C152.533 99.067 154 97.467 157.2 90.267C159.333 85.467 163.6 79.2003 167.2 75.7336C170.533 72.267 173.333 69.067 173.333 68.4003C173.333 67.867 174.533 66.5336 176 65.6003C177.467 64.667 178.667 63.067 178.667 62.0003C178.667 60.8003 180.8 58.667 183.333 57.2003C186.667 55.2003 188 53.467 188 51.067C188 48.667 189.067 47.467 191.867 46.5336C195.333 45.3336 198.667 40.667 198.667 36.8003C198.667 36.0003 202.533 31.2003 207.333 26.267C212.133 21.3336 216 16.4003 216 15.3336C216 10.0003 227.067 10.9336 228.533 16.267Z" fill="black"/>
-                        <path d="M197.467 102.4C195.333 108.667 195.867 111.867 199.067 113.867C201.067 115.067 202.267 114.534 206.133 110.4C208.533 107.6 210.667 104.8 210.667 104.134C210.667 102.8 202.4 97.3338 200.4 97.3338C199.733 97.3338 198.4 99.6004 197.467 102.4Z" fill="black"/>
-                        <path d="M216 111.867C216 113.2 215.067 115.067 214 116C210.533 118.933 211.467 125.067 215.867 127.2C219.2 128.933 220 128.933 222.533 127.2C224 126.133 226.267 123.467 227.333 121.333C229.2 117.6 229.2 117.467 224.4 113.467C218.667 108.8 216 108.267 216 111.867ZM218.667 121.333C218.667 122 218.133 122.667 217.333 122.667C216.667 122.667 216 122 216 121.333C216 120.533 216.667 120 217.333 120C218.133 120 218.667 120.533 218.667 121.333Z" fill="black"/>
-                        <path d="M174.667 114.001C172.8 116.267 173.733 123.201 176.133 126.267C176.933 127.201 178.8 128.001 180.267 128.001C182 128.001 183.6 129.867 185.333 134.001C186.8 137.334 188.533 140.001 189.2 140.001C189.867 140.001 192.267 141.467 194.4 143.201C202.267 149.867 217.333 152.934 224.267 149.201C227.2 147.601 227.6 141.334 224.667 141.334C223.6 141.334 222.667 142.134 222.667 143.201C222.667 144.267 220.667 145.334 217.733 145.734C211.6 146.801 202.533 143.867 197.067 139.201C194.933 137.467 192.667 136.001 192 136.001C191.333 136.001 190 133.467 189.067 130.267C187.467 125.734 186.4 124.534 183.2 124.001C179.733 123.334 179.333 122.801 179.333 118.134C179.333 112.401 177.333 110.667 174.667 114.001Z" fill="black"/>
-                        <path d="M197.867 122.267C197.467 123.6 196.533 126 195.867 127.734C193.867 132.667 194.4 133.734 198 132.8C200.533 132.134 201.333 132.534 201.333 134.134C201.333 135.334 202.267 136 203.733 135.734C204.933 135.467 205.733 134.267 205.467 133.2C205.2 132.134 204.933 128.934 204.8 126C204.667 121.6 204.133 120.534 201.6 120.267C199.733 120 198.4 120.667 197.867 122.267Z" fill="black"/>
-                        <path d="M160.533 138.267C157.467 141.467 154.533 148.8 155.467 151.2C155.867 152.267 157.333 153.6 158.667 154C160.933 154.667 160.933 155.067 159.067 158.667C157.6 161.6 157.6 163.2 158.667 165.334C159.467 166.8 160.533 168 161.067 168C161.6 168 162 170 162 172.267C162 175.734 162.533 176.667 164.667 176.667C166.133 176.667 168.133 177.2 169.067 177.734C170.133 178.534 171.733 178.134 173.333 176.667C174.8 175.334 176 175.067 176.533 175.867C178.933 179.734 201.333 171.334 202.4 166.134C203.067 163.2 200.8 163.467 193.867 167.334C189.467 169.867 185.867 170.667 179.067 170.8C166.533 171.067 166.4 171.067 167.333 168.134C167.867 166.4 167.2 164.934 165.2 163.6C162.4 161.6 162.4 161.467 164.667 157.6C167.467 152.934 166.533 149.334 162.667 149.334C159.333 149.334 159.333 147.867 162.667 143.6C167.333 137.734 165.467 133.334 160.533 138.267Z" fill="black"/>
-                        </svg> 
+        <article id="tab5" class="custom-box chaesu-card" style="display: none">
+            <div class="info-wrap">
+                <div class="card">
+                    <div class="image-box">
+                        <img class="image" src="./images/profile.svg" alt="">
+                    </div>
+                    <div class="profile-title">
+                        <h2>박채수</h2>
+                        <p>2000년 3월 15일</p>
+                    </div>
                 </div>
-                <div class="profile-title">
-                    <h2>박채수</h2>
-                    <p>2000년 3월 15일</p>
-                </div>
-            </div>
-            <div class="info">
-                <div class="info-1">
-                    <div class="mbti">
-                        <div class="custom-layout">
-                            <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="12" fill="#F74544"/>
-                            </svg>
-                            <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="12" fill="#FAAD15"/>
+                <div class="info">
+                    <div class="info-1">
+                        <div class="mbti">
+                            <div class="custom-layout">
+                                <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#F74544" />
                                 </svg>
-                            <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="12" fill="#37C027"/>
+                                <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#FAAD15" />
                                 </svg>
+                                <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#37C027" />
+                                </svg>
+                            </div>
+                            <div class="layout-mbti">
+                                <p>ISFJ</p>
+                            </div>
                         </div>
-                        <div class="layout-mbti">
-                            <p>ISFJ</p>
+                        <div class="proscons">
+                            <h4> 장점</h4>
+                            <p>안녕하세여</p>
+                            <h4> 단점 </h4>
+                            <p> 안녕하세요</p>
                         </div>
                     </div>
-                <div class="proscons">
-                    <p>장단점</p>
-                    <p> 장점은 ~~~~~</p>
-                    <p> 단점은 ~~~~~ </p>
+                    <div class="style">
+                        <p>협업스타일에 대한 내용이 들어갈 예정</p>
+                    </div>
                 </div>
+
+                <div class="ticket">
+                    <div>
+                        <img class="ticketimg" src="./images/ticket.svg" alt="">
+                        <span class ="ticket-text">깃허브</span>
+                    </div>
                 </div>
-                <div class="style">
-                    <p>협업스타일에 대한 내용이 들어갈 예정</p>
-                </div>
-            </div>
+        </article>
+
+        <div id="tab6" class="custom-box" style="display: none">
+            <h3>Tab 6 Content</h3>
+            <p>This is the content of Tab 6.</p>
         </div>
-    </article>
- 
-    
 
-      <div id="tab6" class="custom-box" style="display: none">
-        <h3>Tab 6 Content</h3>
-        <p>This is the content of Tab 6.</p>
-      </div>
-
-      <div id="tab7" class="custom-box" style="display: none">
-        <h3>Tab 7 Content</h3>
-        <p>This is the content of Tab 7.</p>
-      </div>
+        <div id="tab7" class="custom-box" style="display: none">
+            <h3>Tab 7 Content</h3>
+            <p>This is the content of Tab 7.</p>
+        </div>
     </header>
 
-    
+
     <script>
-      // JavaScript로 탭을 관리
-      function openTab(tabName) {
-        // 모든 탭 숨기기
-        var tabs = document.getElementsByClassName("custom-box");
-        for (var i = 0; i < tabs.length; i++) {
-          tabs[i].style.display = "none";
+        // JavaScript로 탭을 관리
+        function openTab(tabName) {
+            // 모든 탭 숨기기
+            var tabs = document.getElementsByClassName("custom-box");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            // 선택한 탭 표시
+            document.getElementById(tabName).style.display = "block";
         }
-        // 선택한 탭 표시
-        document.getElementById(tabName).style.display = "block";
-      }
-      let btns = document.querySelectorAll(".nav-link");
-      btns.forEach((selectedBtn) => {
-        selectedBtn.addEventListener("click", (e) => {
-          btns.forEach((btn) => {
-            btn.classList.remove("active");
-          });
-          selectedBtn.classList.add("active");
+        let btns = document.querySelectorAll(".nav-link");
+        btns.forEach((selectedBtn) => {
+            selectedBtn.addEventListener("click", (e) => {
+                btns.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+                selectedBtn.classList.add("active");
+            });
         });
-      });
     </script>
-  </body>
+</body>
+
 </html>
