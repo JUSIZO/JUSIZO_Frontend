@@ -1,138 +1,205 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
 body {
   background-color: #f8f9fa;
   padding: 20px;
 }
-.nav-tabs-box {
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
+
+header {
   width: 1320px;
-  overflow: hidden;
+  height: 700px;
+  margin: 30px auto;
 }
+
+.nav-tabs-box {
+  position: relative;
+  top: 10px;
+}
+
+.nav-tabs-box ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.nav-tabs-box li {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+
 .nav-tabs-box .nav-link {
-  border: none;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border: 4px solid #2d2d2d;
   color: #495057;
-  background-color: transparent;
-  margin-bottom: -1px;
   border-radius: 0;
 }
+
 .nav-tabs-box .nav-link.active {
   color: #007bff;
-  border-color: #dee2e6 #dee2e6 #fff;
-}
-.custom-box {
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  height: 600px;
+  border-bottom: none;
 }
 
-.wrap {
+.tab-color {
+  background-color: white;
+}
+
+.custom-box {
+  box-sizing: border-box;
   width: 1320px;
   height: 600px;
-  margin: 150px auto 200px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 4px solid #2d2d2d;
 }
 
-.youngsucard {
+.youngsu-background-color {
   background-color: #fbbd99;
+}
+
+article {
+  position: relative;
 }
 
 .card {
   width: 310px;
   height: 470px;
-  border: 2px solid black;
-  box-shadow: 10px 10px;
-  margin-top: 48px;
-  margin-left: 48px;
+  border: 3px solid black;
+  box-shadow: 20px 10px;
+  margin: 20px;
+  background-color: white;
 }
-.wrap2 {
+
+.wrap {
   display: flex;
-  margin-top: 8px;
-  margin-left: 24px;
+  flex-direction: row;
+  margin-left: 15px;
 }
-.wrap3 {
+
+.wrap2 {
+  margin: 30px;
+  margin-left: 40px;
   width: 800px;
   height: 470px;
   display: flex;
   flex-direction: column;
-  margin-top: 48px;
-  margin-left: 48px;
 }
 
-.youngsuprofile > h2 {
-  font-weight: bolder;
-  margin-left: 16px;
+.youngsuprofile {
+  margin: 20px;
 }
 
-.youngsuprofile > p {
-  margin-left: 16px;
+.youngsuprofile p{
+  font-size: 20px;
 }
 
-.profileimage {
-  width: 300px;
+.youngsu-profile-image {
+  width: 310px;
   height: 240px;
-  margin-bottom: 16px;
 }
-.wrap3-2{
+
+.wrap-2 {
   display: flex;
   flex-direction: row;
   width: 790px;
   height: 250px;
-}
-.wrap3-2 .youngsumbti {
-  width: 310px;
-  height: 250px;
-  background-color: #00e3c8;
-  box-shadow: 10px 10px;
+  margin-bottom: 25px;
 }
 
-.youngsumbti .mbtibox {
-  margin: 30px 60px;
-}
-.youngsumbti p {
-  font-size: 100px;
-  font-weight: bolder;
+.wrap-2 .youngsumbti {
+  width: 310px;
+  height: 250px;
+  background-color: whitesmoke;
+  box-shadow: 20px 10px;
+  margin-right: 40px;
+  background-color: #fbbd99;
 }
 
 .youngsumbti .mbtilayout {
   width: 310px;
   height: 20px;
-  background-color: rgb(050, 050, 050);
-  padding-bottom: 30px;
+  background-color: rgb(051, 051, 051);
+  padding-bottom: 5px;
+}
+
+.youngsumbti .mbtilayout-2 {
+  margin: 20px;
+}
+
+.youngsumbti span {
+  font-size: 100px;
+  font-weight: bolder;
+  margin: 40px;
 }
 
 .mbtilayout img {
-  width: 10px;
-  height: 10px;
+  margin-top: 4px;
+  margin-left: 8px;
+  width: 11px;
+  height: 11px;
 }
 
-.wrap3-2 .youngsuproscons{
-  background-color: white;
+.wrap-2 .youngsuproscons {
+  background-color: whitesmoke;
   width: 470px;
-  height: 260px;
-  box-shadow: 10px 10px;
-  margin-left: 48px;
+  height: 245px;
+  box-shadow: 20px 10px;
+  padding: 15px 20px 0px 20px;
 }
 
-.youngsuproscons {
-  padding: 10px;
+.youngsupros,
+.youngsucons {
+  margin: 10px;
 }
 
-.youngsuproscons > h4 {
-  font-weight: bolder;
+.youngsupros p,
+.youngsucons p {
+  margin: 0;
+  font-size: 20px;
 }
 
 .youngsustyle {
-  background-color: white;
+  margin-left: 30px;
+  margin-top: 30px;
+  background-color: whitesmoke;
   width: 755px;
-  height: 180px;
-  box-shadow: 10px 10px;
-  padding: 20px;
-  margin: 20px;
-  margin-top: 40px;
+  height: 179px;
+  box-shadow: 20px 10px;
+  padding: 15px 20px;
+  font-size: 20px;
 }
 
-.youngsustyle > h4 {
-  font-weight: bolder;
+.ticket {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 30px;
+}
+
+.ticket img {
+  width: 400px;
+  height: 400px;
+}
+
+.ticket:hover {
+  transform: translateY(170px);
+  transition: 0.5s;
+  bottom: 0;
 }
 
 .role {
@@ -149,7 +216,7 @@ body {
 .roletext {
   font-size: 30px;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 15%;
   text-align: center;
   color: black
