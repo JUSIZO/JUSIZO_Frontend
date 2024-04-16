@@ -27,10 +27,6 @@
     display: flex;
     flex-direction: column;
 }
-.profile-image {
-    width: 304px;
-    height: 240px;
-}
 
 .profile-title h2, p {
     text-align: center;
