@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Tabs Example</title>
+    <!-- 부트스트랩 CSS 링크 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .nav-tabs-box {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            overflow: hidden;
+        }
+        .nav-tabs-box .nav-link {
+            border: none;
+            color: #495057;
+            background-color: transparent;
+            margin-bottom: -1px;
+            border-radius: 0;
+        }
+        .nav-tabs-box .nav-link.active {
+            color: #007bff;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+        .custom-box {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-tabs-box">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" onclick="openTab('tab1')">Tab 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="openTab('tab2')">Tab 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="openTab('tab3')">Tab 3</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="openTab('tab5')">Tab 5</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="openTab('tab7')">Tab 7</a>
+        </li>
+    </ul>
+</div>
+
+<div id="tab1" class="custom-box">
+    <h3>Tab 1 Content</h3>
+    <p>This is the content of Tab 1.</p>
+</div>
+
+<div id="tab2" class="custom-box" style="display: none;">
+    <h3>Tab 2 Content</h3>
+    <p>This is the content of Tab 2.</p>
+</div>
+
+<div id="tab3" class="custom-box" style="display: none;">
+    <h3>Tab 3 Content</h3>
+    <p>This is the content of Tab 3.</p>
+</div>
+
+<div id="tab4" class="custom-box" style="display: none;">
+    <h3>Tab 4 Content</h3>
+    <p>This is the content of Tab 4.</p>
+</div>
+
+<div id="tab5" class="custom-box" style="display: none;">
+    <h3>Tab 5 Content</h3>
+    <p>This is the content of Tab 5.</p>
+</div>
+
+<div id="tab6" class="custom-box" style="display: none;">
+    <h3>Tab 6 Content</h3>
+    <p>This is the content of Tab 6.</p>
+</div>
+
+<div id="tab7" class="custom-box" style="display: none;">
+    <h3>Tab 7 Content</h3>
+    <p>This is the content of Tab 7.</p>
+</div>
+
+<!-- 부트스트랩 JS 및 jQuery 라이브러리 링크 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // JavaScript로 탭을 관리
+    function openTab(tabName) {
+        // 모든 탭 숨기기
+        var tabs = document.getElementsByClassName("custom-box");
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+        }
+        // 선택한 탭 표시
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
