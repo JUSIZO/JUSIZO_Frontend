@@ -1,0 +1,90 @@
+.wrap {
+    width: 1320px;
+    height: 600px;
+    margin: 150px auto 200px auto;
+}
+.chaesu-card {
+    background-color: #9ECEFF;
+}
+.nav :nth-child(3){
+    background-color: #9ECEFF;
+}
+.card {
+    width: 310px;
+    height: 470px;
+    border: 3px solid black;
+    box-shadow: 20px 10px;
+    margin: 20px 30px 50px;
+    background-color: white;
+}
+.info-wrap {
+    display: flex;
+    flex-direction: row;
+}
+.info {
+    width: 800px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+}
+.profile-image {
+    width: 304px;
+    height: 240px;
+}
+
+.profile-title h2, p {
+    text-align: center;
+}
+
+.info-1{
+    display: flex;
+    flex-direction: row;
+    width: 790px;
+    height: 250px;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.info-1 .mbti {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 10px 10px;
+    margin:30px;
+}
+.mbti .layout-mbti {
+    width: 200px;
+    height: 20px;
+    background-color: rgb(051, 051, 051);
+}
+.mbti .layout-mbti-2 {
+    margin: 30px 50px;
+}
+.mbti p {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+.layout-mbti img {
+    width: 11px;
+    height: 11px;
+}
+.info-1 .proscons{
+    background-color: white;
+    width: 470px;
+    height: 245px;
+    box-shadow: 10px 10px;
+    margin: 70px 0px 30px 90px;
+}
+
+.info-1 .proscons p{
+    font-weight: bolder;
+}
+.style {
+    background-color: white;
+    width: 755px;
+    height: 179px;
+    box-shadow: 10px 10px;
+    padding: 40px;
+    margin: 50px;
+}

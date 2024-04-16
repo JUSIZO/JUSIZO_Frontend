@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Tabs Example</title>
-    <!-- 부트스트랩 CSS 링크 -->
-    <!-- <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    /> -->
+    <link rel="stylesheet" href="chaesu.css">
+
+   
     <style>
       body {
         background-color: #f8f9fa;
@@ -17,7 +15,7 @@
 
       header {
         width: 1320px;
-        height: 700px;
+        height: 600px;
       }
 
       .nav-tabs-box {
@@ -55,8 +53,12 @@
         border-radius: 0;
       }
 
+      .nav-link.tab5{
+        background-color: #9ECEFF;
+      }
+
       .nav-tabs-box .nav-link.active {
-        color: #007bff;
+        color: #333;
         border-bottom: none;
       }
 
@@ -93,7 +95,7 @@
             <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab5')">Tab 5</a>
+            <a class="nav-link tab5" href="#" onclick="openTab('tab5')">Tab 5</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
@@ -115,8 +117,8 @@
       </div>
 
       <div id="tab3" class="custom-box" style="display: none">
-        <h3>Tab 3 Content</h3>
-        <p>This is the content of Tab 3.</p>
+        <h3>Tab 2 Content</h3>
+        <p>This is the content of Tab 2.</p>
       </div>
 
       <div id="tab4" class="custom-box" style="display: none">
@@ -124,10 +126,41 @@
         <p>This is the content of Tab 4.</p>
       </div>
 
-      <div id="tab5" class="custom-box" style="display: none">
-        <h3>Tab 5 Content</h3>
-        <p>This is the content of Tab 5.</p>
-      </div>
+      <article id="tab5" class="custom-box chaesu-card" style="display: none">
+        <div class="info-wrap">
+            <div class="card">
+                <div class="image-box">
+                    <img src="./images/이미지1.jpeg" class="profile-image" alt="">
+                </div>
+                <div class="profile-title">
+                    <h2>박채수</h2>
+                    <p>2000년 3월 15일</p>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info-1">
+                    <div class="mbti">
+                        <div class="layout-mbti">
+                            <img class="ml-2 mb-1" src="./images/dot1.svg" alt="">
+                            <img class="ml-2 mb-1" src="./images/dot2.svg" alt="">
+                            <img class="ml-2 mb-1" src="./images/dot3.svg" alt="">
+                        </div>
+                        <div class="layout-mbti-2">
+                            <p>ISFJ</p>
+                        </div>
+                    </div>
+                <div class="proscons">
+                    <p>장단점</p>
+                </div>
+                </div>
+                <div class="style m-4">
+                    <p>협업스타일</p>
+                </div>
+            </div>
+        </div>
+    </article>
+ 
+    
 
       <div id="tab6" class="custom-box" style="display: none">
         <h3>Tab 6 Content</h3>
@@ -140,11 +173,7 @@
       </div>
     </header>
 
-    <!-- 부트스트랩 JS 및 jQuery 라이브러리 링크
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-
+    
     <script>
       // JavaScript로 탭을 관리
       function openTab(tabName) {
