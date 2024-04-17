@@ -50,11 +50,11 @@ header {
   border-radius: 0;
 }
 .tab-color {
-  background-color: #ffeaa0;
+  background-color: #ffc800;
 }
 
 .nav-tabs-box .nav-link.active {
-  color: #007bff;
+  color: #000000;
   border-bottom: none;
 }
 
@@ -68,7 +68,7 @@ header {
 }
 
 .hyunjeong-background-color {
-  background-color: #ffeaa0;
+  background-color: #fdff9d;
 }
 
 .card {
@@ -88,7 +88,8 @@ header {
 
 .profile-image {
   width: 330px;
-  height: 330px;
+  height: 250px;
+  object-fit: scale-down;
   text-align: center;
   margin-top: auto;
 }
@@ -127,7 +128,7 @@ header {
   margin: 23px;
   float: left;
   box-shadow: 15px 15px;
-  background-color: #00e3c8;
+  background-color: #8db8e9;
   font-size: 110px;
   font-display: center;
   position: relative;
@@ -139,27 +140,50 @@ header {
   height: 40px;
   position: relative;
   background-color: #2d2d2d;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
-.hyunjeong-mbti-circle {
-  margin-left: 10px;
-  width: 0.5px;
-  height: 0.5px;
-  border: 9px;
-  border-radius: 50%;
+.circle {
+  margin: 20px;
 }
 
 .circler {
   background-color: #f74544;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 10%;
 }
 
 .circley {
-  background-color: rgb(255, 217, 0);
+  background-color: #ffc400;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  flex-direction: row;
+  top: 50%;
+  left: 20%;
 }
 
 .circleg {
   background-color: #24c239;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  flex-direction: row;
+  top: 50%;
+  left: 30%;
 }
+
 .hyunjeong-proscons {
   background-color: #ffffff;
   width: 650px;
@@ -181,17 +205,33 @@ header {
 .hyunjeong-style {
   background-color: #ffffff;
   width: 700px;
-  height: 165px;
+  height: 150px;
   box-shadow: 15px 15px;
   padding: 15px 20px;
   margin-left: 65px;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .pla {
   margin: 20px;
 }
+
 .hyunjeong-style p {
   margin: 0 0 10px 0;
   font-size: 20px;
+}
+
+.compo {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  z-index: -2;
+  transform: translate(140%, 0);
+}
+
+.component {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
