@@ -9,66 +9,10 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     /> -->
-    <style>
-      body {
-        background-color: #f8f9fa;
-        padding: 20px;
-      }
-
-      header {
-        width: 1320px;
-        height: 700px;
-      }
-
-      .nav-tabs-box {
-        position: relative;
-        top: 10px;
-      }
-
-      .nav-tabs-box ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100px;
-        display: flex;
-      }
-
-      .nav-tabs-box li {
-        list-style-type: none;
-        width: 100%;
-        height: 100%;
-      }
-
-      .nav-tabs-box .nav-link {
-        position: relative;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-size: 32px;
-        height: 100%;
-        width: 100%;
-        border: 4px solid #2d2d2d;
-        color: #495057;
-        background-color: white;
-        border-radius: 0;
-      }
-
-      .nav-tabs-box .nav-link.active {
-        color: #007bff;
-        border-bottom: none;
-      }
-
-      .custom-box {
-        box-sizing: border-box;
-        width: 1320px;
-        height: 600px;
-        padding: 20px;
-        background-color: #fff;
-        border: 4px solid #2d2d2d;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/hyunjeong.css" />
   </head>
   <body>
     <header>
@@ -77,29 +21,29 @@
           <li class="nav-item">
             <a
               class="nav-link active"
+              style="background-color: #ffffff"
               aria-current="page"
               href="#"
               onclick="openTab('tab1')"
-              >Tab 1</a
-            >
+            ></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab2')">Tab 2</a>
+            <a class="nav-link" style="background-color: #ffffff" href="#" onclick="openTab('tab2')"></a>
+          </li>
+          <li class="nav-item hyunjeong-background-color">
+            <a class="nav-link" href="#" onclick="openTab('tab3')">현정</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab3')">Tab 3</a>
+            <a class="nav-link" style="background-color: #ffffff" href="#" onclick="openTab('tab4')"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
+            <a class="nav-link" style="background-color: #ffffff" href="#" onclick="openTab('tab5')"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab5')">Tab 5</a>
+            <a class="nav-link" style="background-color: #ffffff" href="#" onclick="openTab('tab6')"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="openTab('tab7')">Tab 7</a>
+            <a class="nav-link" style="background-color: #ffffff" href="#" onclick="openTab('tab7')"></a>
           </li>
         </ul>
       </div>
@@ -114,10 +58,51 @@
         <p>This is the content of Tab 2.</p>
       </div>
 
-      <div id="tab3" class="custom-box" style="display: none">
-        <h3>Tab 3 Content</h3>
-        <p>This is the content of Tab 3.</p>
-      </div>
+      <article id="tab3" class="custom-box hyunjeong-background-color" style="display: none">
+        <div class="info">
+          <div class="card">
+            <div class="profile-image">
+              <img id="hyunjeong-profile-image" style="" src="leaves.jpg" alt="프로필사진" />
+            </div>
+            <div class="frofile-txt">
+              <h1>곽현정</h1>
+              <p>2000년 5월 13일</p>
+            </div>
+          </div>
+          <div class="down">
+            <div class="up">
+              <div class="hyunjeong-mbti">
+                <div class="hyunjeong-mbti-circle">
+                  <div class="circler" style="background-color: #f74544"></div>
+                  <div class="circley" style="background-color: rgb(255, 208, 0)"></div>
+                  <div class="circleg" style="background-color: #24c239"></div>
+                </div>
+                <div class="hyunjeong-mbti-box"></div>
+                <div class="hyunjeong-mbti-txt">
+                  <span>ISTP</span>
+                </div>
+              </div>
+
+              <div class="hyunjeong-proscons">
+                <div class="pros">
+                  <p>장점</p>
+                  <span style="font-weight: 700">~장점~</span>
+                </div>
+                <div class="cons">
+                  <p>단점</p>
+                  <span style="font-weight: 700">~단점~</span>
+                </div>
+              </div>
+            </div>
+            <div class="hyunjeong-style">
+              <div class="pla">
+                <p>협업스타일</p>
+                <span style="font-weight: 700">~협업스타일~</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
 
       <div id="tab4" class="custom-box" style="display: none">
         <h3>Tab 4 Content</h3>
@@ -149,20 +134,20 @@
       // JavaScript로 탭을 관리
       function openTab(tabName) {
         // 모든 탭 숨기기
-        var tabs = document.getElementsByClassName("custom-box");
+        var tabs = document.getElementsByClassName('custom-box');
         for (var i = 0; i < tabs.length; i++) {
-          tabs[i].style.display = "none";
+          tabs[i].style.display = 'none';
         }
         // 선택한 탭 표시
-        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).style.display = 'block';
       }
-      let btns = document.querySelectorAll(".nav-link");
+      let btns = document.querySelectorAll('.nav-link');
       btns.forEach((selectedBtn) => {
-        selectedBtn.addEventListener("click", (e) => {
+        selectedBtn.addEventListener('click', (e) => {
           btns.forEach((btn) => {
-            btn.classList.remove("active");
+            btn.classList.remove('active');
           });
-          selectedBtn.classList.add("active");
+          selectedBtn.classList.add('active');
         });
       });
     </script>

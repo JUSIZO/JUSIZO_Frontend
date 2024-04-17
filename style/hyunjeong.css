@@ -1,0 +1,182 @@
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+header {
+  width: 1320px;
+  height: 700px;
+}
+
+.nav-tabs-box {
+  position: relative;
+  top: 10px;
+}
+
+.nav-tabs-box ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.nav-tabs-box li {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-tabs-box .nav-link {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 32px;
+  height: 100%;
+  width: 100%;
+  border: 4px solid #2d2d2d;
+  color: #495057;
+  /*background-color: white;*/
+  border-radius: 0;
+}
+
+.nav-tabs-box .nav-link.active {
+  color: #007bff;
+  border-bottom: none;
+}
+
+.custom-box {
+  box-sizing: border-box;
+  width: 1320px;
+  height: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 4px solid #2d2d2d;
+}
+
+.hyunjeong-background-color {
+  background-color: #ffeaa0;
+}
+
+.card {
+  width: 330px;
+  height: 485px;
+  border: 3px solid black;
+  box-shadow: 15px 15px;
+  margin: 25px;
+  background-color: white;
+}
+
+.info {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-image {
+  width: 330px;
+  height: 330px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.frofile-txt {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.profile-txt > h3 {
+  font-size: 60px;
+  text-align: start;
+}
+
+.profile-txt > p {
+  font-size: 40px;
+  text-align: right;
+  margin: 0px;
+}
+
+.up {
+  width: 800px;
+  height: 280px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.hyunjeong-mbti {
+  width: 300px;
+  height: 230px;
+  margin: 23px;
+  float: left;
+  box-shadow: 15px 15px;
+  background-color: #00e3c8;
+  font-size: 110px;
+  font-display: center;
+  position: relative;
+  text-align: center;
+}
+
+.hyunjeong-mbti-box {
+  width: 300px;
+  height: 40px;
+  position: relative;
+  background-color: #2d2d2d;
+}
+
+.hyunjeong-mbti-circle {
+  margin: 0 auto;
+  width: 0.5px;
+  height: 0.5px;
+  border: 9px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline;
+}
+
+.hyunjeong-proscons {
+  background-color: #ffffff;
+  width: 650px;
+  height: 200px;
+  box-shadow: 15px 15px;
+  padding: 20px 20px 0px 20px;
+  margin: 23px;
+}
+.pros,
+.cons {
+  margin: 20px;
+}
+.pros p,
+.cons p {
+  margin: 5px;
+  font-size: 20px;
+}
+.hyunjeong-style {
+  background-color: #ffffff;
+  width: 700px;
+  height: 165px;
+  box-shadow: 15px 15px;
+  padding: 15px 20px;
+  margin-left: 65px;
+  margin-top: 25px;
+}
+
+.pla {
+  margin: 20px;
+}
+.hyunjeong-style p {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
