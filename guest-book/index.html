@@ -23,16 +23,10 @@
     <div class="guest-book"></div>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+  <script>
     const firebaseConfig = {
       apiKey: "AIzaSyCzNxdnZKBGObRbWt5gML4QxE-Q_vF5y_k",
       authDomain: "zusizo-web-site.firebaseapp.com",
@@ -45,5 +39,46 @@
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+
+    // 
+    const db = firebase.firestore();
+    let posts =[] ;
+    // 모든 데이터 가져오기
+    db.collection('guest-book').get().then((result) => {
+      result.forEach((data) => {
+        posts.push(data.data());
+        console.log(data.data());
+      });
+      const ul = document.createElement('ul');
+      posts.forEach(post => {
+        const li = document.createElement('li');
+
+        const userNameElement = document.createElement('p');
+        const userName = document.createTextNode(post['username']);
+        userNameElement.appendChild(userName);
+        li.appendChild(userNameElement);
+
+        const dateElement = document.createElement('p');
+        const datetime = new Date(post['date']['seconds']*1000);
+        const year = datetime.getFullYear();
+        const month = datetime.getMonth();
+        const date = datetime.getDate();
+        const hours = datetime.getHours();
+        const minutes = datetime.getMinutes();
+
+        const dateNode = document.createTextNode(`${year}년 ${month}월 ${date}일 ${hours}:${minutes}`);
+
+        dateElement.appendChild(dateNode);
+        li.appendChild(dateElement);
+
+        const descriptionElement = document.createElement('p');
+        const description = document.createTextNode(post['description']);
+        descriptionElement.appendChild(description);
+        li.appendChild(descriptionElement);
+
+        ul.appendChild(li);
+      });
+      document.body.appendChild(ul);
+    });
   </script>
 </html>
