@@ -227,6 +227,7 @@ header {
   position: relative;
   z-index: -2;
   transform: translate(140%, 0);
+  top: -250px;
 }
 
 .component {
@@ -234,4 +235,16 @@ header {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.hov {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: -2;
+}
+
+.hov:hover {
+  transform: translateY(270px);
+  transition: 0.5s;
 }
