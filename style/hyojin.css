@@ -6,7 +6,7 @@
 body {
     margin: 0;
 }
-.tab-color {
+.tab-color a {
     background-color: #77B0AA;
 }
 .nav-tabs-box .nav-link.active {

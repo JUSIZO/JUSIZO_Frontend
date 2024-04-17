@@ -8,7 +8,7 @@
     background-color: #6A88BE;
 }
 
-.nav :nth-child(5){
+.nav li:nth-child(5) a{
     background-color: #6A88BE;
 }
 
