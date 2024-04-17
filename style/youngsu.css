@@ -1,3 +1,6 @@
+/* 공용 코드 */
+/* 공용 코드 */
+
 * {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
@@ -68,6 +71,9 @@ header {
   border: 4px solid #2d2d2d;
 }
 
+/* 개인 코드 */
+/* 개인 코드 */
+
 .youngsu-background-color {
   background-color: #fbbd99;
 }
@@ -127,7 +133,6 @@ article {
   background-color: whitesmoke;
   box-shadow: 20px 10px;
   margin-right: 40px;
-  background-color: #fbbd99;
 }
 
 .youngsumbti .mbtilayout {
@@ -182,42 +187,4 @@ article {
   box-shadow: 20px 10px;
   padding: 15px 20px;
   font-size: 20px;
-}
-
-.ticket {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  right: 30px;
-}
-
-.ticket img {
-  width: 400px;
-  height: 400px;
-}
-
-.ticket:hover {
-  transform: translateY(170px);
-  transition: 0.5s;
-  bottom: 0;
-}
-
-.role {
-  position: relative
-}
-
-.role > img {
-  width: 300px;
-  height: 150px;
-  margin-top: 90px;
-  margin-left: 110px;
-}
-
-.roletext {
-  font-size: 30px;
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  text-align: center;
-  color: black
 }
