@@ -4,107 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Tabs Example</title>
-    <!-- 부트스트랩 CSS 링크 -->
-    <!-- <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    /> -->
-    <style>
-      body {
-        background-color: #f8f9fa;
-        padding: 20px;
-      }
-
-      header {
-        width: 1320px;
-        height: 700px;
-      }
-
-      .nav-tabs-box {
-        position: relative;
-        top: 10px;
-      }
-
-      .nav-tabs-box ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100px;
-        display: flex;
-      }
-
-      .nav-tabs-box li {
-        list-style-type: none;
-        width: 100%;
-        height: 100%;
-      }
-
-      .nav-tabs-box .nav-link {
-        position: relative;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-size: 32px;
-        height: 100%;
-        width: 100%;
-        border: 4px solid #2d2d2d;
-        color: #495057;
-        background-color: white;
-        border-radius: 0;
-      }
-
-      .nav-tabs-box .nav-link.active {
-        color: #007bff;
-        border-bottom: none;
-      }
-
-      .custom-box {
-        box-sizing: border-box;
-        width: 1320px;
-        height: 600px;
-        padding: 20px;
-        background-color: #fff;
-        border: 4px solid #2d2d2d;
-      }
-    </style>
+    <link rel="stylesheet" href="./style/jaehun.css" />
   </head>
   <body>
+    <div class="logo-box">
+      <img src="./img/logo.png" alt="" />
+    </div>
     <header>
       <div class="nav-tabs-box">
         <ul class="nav nav-tabs">
           <li class="nav-item">
             <a
-              class="nav-link item0 active"
+              class="nav-link item0"
               aria-current="page"
-              href="#"
+              href="#a"
               onclick="openTab('tab1')"
               >팀 소개</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link item1" href="#" onclick="openTab('tab2')">영수</a>
+            <a class="nav-link item1" href="#a" onclick="openTab('tab2')"
+              >영수</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link item2" href="#" onclick="openTab('tab3')">현정</a>
+            <a class="nav-link item2" href="#a" onclick="openTab('tab3')"
+              >현정</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link item3" href="#" onclick="openTab('tab4')">효진</a>
+            <a class="nav-link item3" href="#a" onclick="openTab('tab4')"
+              >효진</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link item4" href="#" onclick="openTab('tab5')">채수</a>
+            <a class="nav-link item4" href="#a" onclick="openTab('tab5')"
+              >채수</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link item5" href="#" onclick="openTab('tab6')">재훈</a>
+            <a class="nav-link item5 active" href="#a" onclick="openTab('tab6')"
+              >재훈</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link item6" href="#" onclick="openTab('tab7')">가현</a>
+            <a class="nav-link item6" href="#a" onclick="openTab('tab7')"
+              >가현</a
+            >
           </li>
         </ul>
       </div>
 
-      <div id="tab1" class="custom-box">
+      <div id="tab1" class="custom-box" style="display: none">
         <h3>Tab 1 Content</h3>
         <p>This is the content of Tab 1.</p>
       </div>
@@ -129,42 +80,57 @@
         <p>This is the content of Tab 5.</p>
       </div>
 
-      <div id="tab6" class="custom-box" style="display: none">
-        <h3>Tab 6 Content</h3>
-        <p>This is the content of Tab 6.</p>
+      <div id="tab6" class="jaehun custom-box" style="display: grid">
+        <div class="card-box">
+          <div class="card front">
+            <img class="profile-img" src="./img/jaehun02.JPG" alt="" />
+            <p class="name">곽재훈</p>
+            <p class="birth">1997년 12월 24일</p>
+            <p class="job">직업: AKMU 팬</p>
+          </div>
+          <div class="card back"></div>
+        </div>
+        <div class="mbti">
+          <div class="option-bar">
+            <div class="option-bar-btn red"></div>
+            <div class="option-bar-btn yellow"></div>
+            <div class="option-bar-btn green"></div>
+          </div>
+          <div class="text">ENFJ</div>
+        </div>
+        <div class="proscons">
+          <p class="p-title">장점</p>
+          <p class="p-description">
+            제 입으로 말하긴 웃기지만, 성격이 널널한 편입니다.<br>
+            그리고 맡은 일은 끝까지 한다는 점?
+          </p>
+          <p class="p-title">단점</p>
+          <p class="p-description">
+            멘탈과 기억력이 나빠요. <br>에어팟을 끼고서 에어팟이 어디 갔는지 자주 찾습니다.
+          </p>
+        </div>
+        <div class="style">
+          <p class="p-title">협업스타일</p>
+          <p class="p-description">
+            함께 일하는 것이 익숙하지는 않지만, 신나고 즐겁게 일하려고 노력합니다.<br>
+            신나고 즐거운 분위기에서 더 좋은 결과가 나올 수 있다고 생각하거든요.
+          </p>
+        </div>
       </div>
-
+      <div class="paper">
+        <p>Github</p>
+        <a href="https://github.com/KwakOri">https://github.com/KwakOri</a>
+        <p>Velog</p>
+        <a href="https://velog.io/@jh5414092/posts"
+          >https://velog.io/@jh5414092/posts</a
+        >
+      </div>
       <div id="tab7" class="custom-box" style="display: none">
         <h3>Tab 7 Content</h3>
         <p>This is the content of Tab 7.</p>
       </div>
     </header>
 
-    <!-- 부트스트랩 JS 및 jQuery 라이브러리 링크
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-
-    <script>
-      // JavaScript로 탭을 관리
-      function openTab(tabName) {
-        // 모든 탭 숨기기
-        var tabs = document.getElementsByClassName("custom-box");
-        for (var i = 0; i < tabs.length; i++) {
-          tabs[i].style.display = "none";
-        }
-        // 선택한 탭 표시
-        document.getElementById(tabName).style.display = "block";
-      }
-      let btns = document.querySelectorAll(".nav-link");
-      btns.forEach((selectedBtn) => {
-        selectedBtn.addEventListener("click", (e) => {
-          btns.forEach((btn) => {
-            btn.classList.remove("active");
-          });
-          selectedBtn.classList.add("active");
-        });
-      });
-    </script>
+    <script src="./js/jaehun.js"></script>
   </body>
 </html>
