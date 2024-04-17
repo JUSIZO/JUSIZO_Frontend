@@ -75,7 +75,7 @@ header {
   width: 330px;
   height: 485px;
   border: 3px solid black;
-  box-shadow: 15px 15px;
+  box-shadow: 20px 20px;
   margin: 25px;
   background-color: white;
 }
@@ -130,6 +130,7 @@ header {
   box-shadow: 15px 15px;
   background-color: #8db8e9;
   font-size: 110px;
+  border: 3px solid black;
   font-display: center;
   position: relative;
   text-align: center;
@@ -186,12 +187,13 @@ header {
 
 .hyunjeong-proscons {
   background-color: #ffffff;
-  width: 650px;
+  width: 350px;
   height: 200px;
   box-shadow: 15px 15px;
   padding: 20px 20px 0px 20px;
   margin: 23px;
   margin-top: 30px;
+  border: 3px solid black;
 }
 .pros,
 .cons {
@@ -210,6 +212,7 @@ header {
   padding: 15px 20px;
   margin-left: 65px;
   margin-top: 30px;
+  border: 3px solid black;
 }
 
 .pla {
