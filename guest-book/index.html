@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 98vw;
+        height: 98vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .guest-book {
+        width: 1320px;
+        height: 700px;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="guest-book"></div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCzNxdnZKBGObRbWt5gML4QxE-Q_vF5y_k",
+      authDomain: "zusizo-web-site.firebaseapp.com",
+      projectId: "zusizo-web-site",
+      storageBucket: "zusizo-web-site.appspot.com",
+      messagingSenderId: "68338919855",
+      appId: "1:68338919855:web:8f35ce792e8fe33547e75a",
+      measurementId: "G-TL8B0BGMG5",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</html>
