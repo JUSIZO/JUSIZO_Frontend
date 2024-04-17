@@ -53,7 +53,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.info-1 .mbti {
+.info-1 .chaesu-mbti {
     flex: 1;
     width: 200px;
     height: 200px;
@@ -61,23 +61,23 @@
     box-shadow: 10px 10px;
     margin:30px;
 }
-.mbti .custom-layout {
+.chaesu-mbti .custom-layout {
     width: 200px;
     height: 20px;
     background-color: rgb(051, 051, 051);
 }
 
-.mbti .custom-layout .button {
+.chaesu-mbti .custom-layout .button {
     margin-top: 4px;
     width: 11px;
     height: 12px;
     margin-left: 3px;
 }
 
-.mbti .layout-mbti {
+.chaesu-mbti .layout-mbti {
     margin: 30px 50px;
 }
-.mbti p {
+.chaesu-mbti p {
     font-size: 50px;
     font-weight: bolder;
     text-align: center;
@@ -116,7 +116,7 @@
 .ticket{
     position: absolute;
     z-index: -1;
-    top: 50%;
+    top: 45%;
     right: 30px;
 }
 .ticket .ticketimg{
@@ -132,9 +132,18 @@
 .ticket .ticket-text{
     position: absolute;
     top: 15%;
-    left: 50%;
-    font-size: 25px;
+    left: 46%;
+    font-size: 20px;
     font-weight: bolder;
     transform: translate( -50%, -50% );
 }
 
+
+.ticket .velog-text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 20px;
+    font-weight: bolder;
+    transform: translate( -50%, -50% );
+}
