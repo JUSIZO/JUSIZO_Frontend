@@ -1,128 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Tabs Example</title>
-    <link rel="stylesheet" href="./style/jaehun.css" />
-  </head>
-  <body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .nav-tabs-box {
+            position: relative;
+            top: 10px;
+          }
+          
+          .nav-tabs-box ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+          }
+          
+          .nav-tabs-box li {
+            list-style-type: none;
+            width: 100%;
+            height: 100%;
+          }
+          
+          .nav-tabs-box .nav-link {
+            position: relative;
+            top: 30px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 32px;
+            height: 100%;
+            width: 100%;
+            border: 4px solid #2d2d2d;
+            color: white;
+            /* background-color: white; */
+            border-radius: 0 30px 0 0;
+            transition: all 0.5s;
+          }
+          
+          .nav-tabs-box .nav-link.active {
+            border-bottom: none;
+            top: 0px;
+          }
+    </style>
+</head>
+
+<body>
     <div class="logo-box">
-      <img src="./img/logo.png" alt="" />
+        <img src="./img/logo.png" alt="" />
     </div>
     <header>
-      <div class="nav-tabs-box">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a
-              class="nav-link item0"
-              aria-current="page"
-              href="#a"
-              onclick="openTab('tab1')"
-              >팀 소개</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link item1" href="#a" onclick="openTab('tab2')"
-              >영수</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link item2" href="#a" onclick="openTab('tab3')"
-              >현정</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link item3" href="#a" onclick="openTab('tab4')"
-              >효진</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link item4" href="#a" onclick="openTab('tab5')"
-              >채수</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link item5 active" href="#a" onclick="openTab('tab6')"
-              >재훈</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link item6" href="#a" onclick="openTab('tab7')"
-              >가현</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <div id="tab1" class="custom-box" style="display: none">
-        <h3>Tab 1 Content</h3>
-        <p>This is the content of Tab 1.</p>
-      </div>
-
-      <div id="tab2" class="custom-box" style="display: none">
-        <h3>Tab 2 Content</h3>
-        <p>This is the content of Tab 2.</p>
-      </div>
-
-      <div id="tab3" class="custom-box" style="display: none">
-        <h3>Tab 3 Content</h3>
-        <p>This is the content of Tab 3.</p>
-      </div>
-
-      <div id="tab4" class="custom-box" style="display: none">
-        <h3>Tab 4 Content</h3>
-        <p>This is the content of Tab 4.</p>
-      </div>
-
-      <div id="tab5" class="custom-box" style="display: none">
-        <h3>Tab 5 Content</h3>
-        <p>This is the content of Tab 5.</p>
-      </div>
-
-      <div id="tab6" class="jaehun custom-box" style="display: grid">
-        <div class="card-box">
-          <div class="card front">
-            <img class="profile-img" src="./img/jaehun02.JPG" alt="" />
-            <p class="name">곽재훈</p>
-            <p class="birth">1997년 12월 24일</p>
-            <p class="job">직업: AKMU 팬</p>
-          </div>
-          <div class="card back"></div>
+        <script src="./js/jaehun.js"></script>
+        <div class="nav-tabs-box">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link item0" aria-current="page" href="#a" onclick="openTab('tab1')">팀 소개</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link item1" href="#a" onclick="openTab('tab2')">영수</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link item2" href="#a" onclick="openTab('tab3')">현정</a>
+                </li>
+                <li class="nav-item hyojin-background-color">
+                    <a class="nav-link item3 active" href="#a" onclick="openTab('tab4')">효진</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link item4 active" href="#a" onclick="openTab('tab5')">채수</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link item5 active" href="#a" onclick="openTab('tab6')">재훈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link item6" href="#a" onclick="openTab('tab7')">가현</a>
+                </li>
+            </ul>
         </div>
-        <div class="mbti">
-          <div class="option-bar">
-            <div class="option-bar-btn red"></div>
-            <div class="option-bar-btn yellow"></div>
-            <div class="option-bar-btn green"></div>
-          </div>
-          <div class="text">ENFJ</div>
+
+        <div id="tab1" class="custom-box" style="display: none">
+            <h3>Tab 1 Content</h3>
+            <p>This is the content of Tab 1.</p>
         </div>
-        <div class="proscons">
-          <p class="p-title">장점</p>
-          <p class="p-description">
-            제 입으로 말하긴 웃기지만, 성격이 널널한 편입니다.<br>
-            그리고 맡은 일은 끝까지 한다는 점?
-          </p>
-          <p class="p-title">단점</p>
-          <p class="p-description">
-            멘탈과 기억력이 나빠요. <br>에어팟을 끼고서 에어팟이 어디 갔는지 자주 찾습니다.
-          </p>
+
+        <div id="tab2" class="custom-box" style="display: none">
+            <h3>Tab 2 Content</h3>
+            <p>This is the content of Tab 2.</p>
         </div>
-        <div class="style">
-          <p class="p-title">협업스타일</p>
-          <p class="p-description">
-            함께 일하는 것이 익숙하지는 않지만, 신나고 즐겁게 일하려고 노력합니다.<br>
-            신나고 즐거운 분위기에서 더 좋은 결과가 나올 수 있다고 생각하거든요.
-          </p>
+
+        <div id="tab3" class="custom-box" style="display: none">
+            <h3>Tab 3 Content</h3>
+            <p>This is the content of Tab 3.</p>
         </div>
-      </div>
-      <div id="tab7" class="custom-box" style="display: none">
-        <h3>Tab 7 Content</h3>
-        <p>This is the content of Tab 7.</p>
-      </div>
+
+        <article id="tab4" class="custom-box hyojin-background-color" style="display: none;">
+            <link rel="stylesheet" href="./style/hyojin.css" />
+            <div class="info-wrap">
+                <div class="card">
+                    <div class="image-box">
+                        <!-- 프로필사진 images파일에 담아서 사용-->
+                        <img src="./img/hyojin_IMG_2324.JPG" class="profile-image" alt="프로필사진">
+                    </div>
+                    <div class="profile-title">
+                        <!-- 본인 이름 -->
+                        <h2>김효진</h2>
+                        <!-- 생년월일 -->
+                        <p>1999년 2월 25일</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-1">
+                        <div class="mbti hyojin-mbti-color">
+                            <div class="layout-mbti">
+                                <img src="./img/hyojin_dot1.svg" alt="dot image 1">
+                                <img src="./img/hyojin_dot2.svg" alt="dot image 2">
+                                <img src="./img/hyojin_dot3.svg" alt="dot image 3">
+                            </div>
+                            <div class="layout-mbti-2">
+                                <!-- 본인 MBTI -->
+                                <span>ISTP</span>
+                            </div>
+                        </div>
+                        <div class="proscons">
+                            <div class="pros">
+                                <p>장점</p>
+                                <!-- 본인 장점 -->
+                                <span style="font-weight: 700;">새로운 환경에 적응을 금방 합니다.</span><br>
+                            </div>
+                            <div class="cons">
+                                <p>단점</p>
+                                <!-- 본인 단점 -->
+                                <span style="font-weight: 700;">낯을 많이 가려 필요한 경우가 아니면 먼저 말을 잘 안겁니다.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="style">
+                        <p>협업 스타일</p>
+                        <!-- 본인 협업 스타일 -->
+                        <span style="font-weight: 700;">
+                            충돌 없이 의사소통을 하려고 노력하고 다른 사람들에게 많이 배우려 합니다.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="ticket-box">
+                <div class="ticket-image">
+                    <img src="./img/hyojin_ticket.svg" alt="ticket image"> 
+                </div>
+                <div class="user-link">
+                    <div class="github-box">
+                        <div class="github-itmes">
+                            <img src="./img/hyojin_square-github.svg" style="width: 23px; height: 23px;" class="github-logo" alt="">
+                            <p class="github-title">Github</p>
+                        </div>
+                        <a href="https://github.com/hyowls" target="_blank">https://github.com/hyowls</a>
+                    </div>
+                    <div class="velog-box">
+                        <div class="velog-items">
+                            <img src="./img/hyojin_velog_logo_icon_249278.svg" style="width: 21px; height: 21px;" class="velog-logo" alt="">
+                            <p class="velog-title">Velog</p>
+                        </div>
+                        <a href="https://velog.io/@hyowmls/posts" target="_blank">https://velog.io/@hyowmls/posts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p><span>의견듣기</span>담당</p>
+            </div>
+        </article>
+
+        <article id="tab5" class="custom-box chaesu-card" style="display: grid">
+            <link rel="stylesheet" href="./style/chaesu.css" />
+            <div class="info-wrap">
+                <div class="card">
+                    <div class="image-box">
+                        <img class="image" src="./img/chaesu_profile.svg" alt="">
+                    </div>
+                    <div class="profile-title">
+                        <h2>박채수</h2>
+                        <p>2000년 3월 15일</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-1">
+                        <div class="chaesu-mbti">
+                            <div class="custom-layout">
+                                <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#F74544" />
+                                </svg>
+                                <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#FAAD15" />
+                                </svg>
+                                <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#37C027" />
+                                </svg>
+                            </div>
+                            <div class="layout-mbti">
+                                <p>ISFJ</p>
+                            </div>
+                        </div>
+                        <div class="proscons">
+                            <h4> 장점</h4>
+                            <p> I지만 매우 밝고 긍정적입니다</p>
+                            <h4> 단점 </h4>
+                            <p> 부끄러움이 많아요</p>
+                        </div>
+                    </div>
+                    <div class="style">
+                        <p>협업스타일</p>
+                        <span> 평화를 중요하게 생각합니다! 막히는게 있으면 최대한 물어보려고 많이 하는거 같습니다.</span>
+                    </div>
+                </div>
+
+                <div class="ticket">
+                    <div>
+                        <img class="ticketimg" src="./img/chaesu_ticket.svg" alt="">
+                    </div>
+
+                    <div class="ticket-text">
+                        <p>GITHUB:</p>
+                        <a href="https://github.com/Chasyuss"> https://github.com/Chasyuss</a>
+                    </div>
+
+                    <div class="velog-text">
+                        <p>VELOG:</p>
+                        <a href="https://velog.io/@cotn963/posts"> https://velog.io/@cotn963/posts</a>
+                    </div>
+                </div>
+
+                <div class="role">
+                    <div>
+                        <img class="role-img" src="./img/chaesu_role.svg">
+                        <p>호응담당</p>
+                    </div>
+
+                </div>
+        </article>
+
+        <div id="tab6" class="jaehun custom-box" style="display: grid">
+            <link rel="stylesheet" href="./style/jaehun.css" />
+            <div class="card-box">
+                <div class="card front">
+                    <img class="profile-img" src="./img/jaehun02.JPG" alt="" />
+                    <p class="name">곽재훈</p>
+                    <p class="birth">1997년 12월 24일</p>
+                    <p class="job">직업: AKMU 팬</p>
+                </div>
+                <div class="card back"></div>
+            </div>
+            <div class="mbti">
+                <div class="option-bar">
+                    <div class="option-bar-btn red"></div>
+                    <div class="option-bar-btn yellow"></div>
+                    <div class="option-bar-btn green"></div>
+                </div>
+                <div class="text">ENFJ</div>
+            </div>
+            <div class="proscons">
+                <p class="p-title">장점</p>
+                <p class="p-description">
+                    제 입으로 말하긴 웃기지만, 성격이 널널한 편입니다.<br>
+                    그리고 맡은 일은 끝까지 한다는 점?
+                </p>
+                <p class="p-title">단점</p>
+                <p class="p-description">
+                    멘탈과 기억력이 나빠요. <br>에어팟을 끼고서 에어팟이 어디 갔는지 자주 찾습니다.
+                </p>
+            </div>
+            <div class="style">
+                <p class="p-title">협업스타일</p>
+                <p class="p-description">
+                    함께 일하는 것이 익숙하지는 않지만, 신나고 즐겁게 일하려고 노력합니다.<br>
+                    신나고 즐거운 분위기에서 더 좋은 결과가 나올 수 있다고 생각하거든요.
+                </p>
+            </div>
+        </div>
+        <div id="tab7" class="custom-box" style="display: none">
+            <h3>Tab 7 Content</h3>
+            <p>This is the content of Tab 7.</p>
+        </div>
     </header>
+</body>
 
-    <script src="./js/jaehun.js"></script>
-  </body>
 </html>
