@@ -113,10 +113,14 @@
     font-weight: bolder;
 }
 
+.style span{
+    font-size: 50;
+}
+
 .ticket{
     position: absolute;
     z-index: -1;
-    top: 45%;
+    top: 55%;
     right: 30px;
 }
 .ticket .ticketimg{
@@ -124,16 +128,16 @@
     height: 400px;
 }
 .ticket:hover {
-    transform: translateY(170px);
+    transform: translateY(180px);
     transition: 0.5s;
     bottom: 0;
 }
 
 .ticket .ticket-text{
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 46%;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
     transform: translate( -50%, -50% );
 }
@@ -141,9 +145,28 @@
 
 .ticket .velog-text{
     position: absolute;
-    top: 40%;
+    top: 70%;
     left: 50%;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
     transform: translate( -50%, -50% );
+}
+
+.role{
+    position: absolute;
+    z-index: 1;
+    top: 85%;
+    left: 30px;
+}
+
+.role-img{
+    width: 300px;
+    height: 400px;
+}
+
+.role p{
+    position: absolute;
+    top: 34%;
+    left: 35%;
+    font-size: 25px;
 }
