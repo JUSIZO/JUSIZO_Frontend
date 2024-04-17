@@ -6,83 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Tabs Example</title>
     <link rel="stylesheet" href="chaesu.css">
-
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
-        * {
-            font-family: "Noto Sans KR", sans-serif;
-        }
-
-
-        body {
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-
-        header {
-            width: 1320px;
-            height: 600px;
-        }
-
-        .nav-tabs-box {
-            position: relative;
-            top: 10px;
-        }
-
-        .nav-tabs-box ul {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100px;
-            display: flex;
-        }
-
-        .nav-tabs-box li {
-            list-style-type: none;
-            width: 100%;
-            height: 100%;
-        }
-
-        .nav-tabs-box .nav-link {
-            position: relative;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            font-size: 32px;
-            height: 100%;
-            width: 100%;
-            border: 4px solid #2d2d2d;
-            color: #495057;
-            background-color: white;
-            border-radius: 0;
-        }
-
-        .nav-link.tab5 {
-            background-color: #6A88BE;
-        }
-
-        .nav-tabs-box .nav-link.active {
-            color: #fff;
-            border-bottom: none;
-        }
-
-        .custom-box {
-            box-sizing: border-box;
-            width: 1320px;
-            height: 600px;
-            padding: 20px;
-            background-color: #fff;
-            border: 4px solid #2d2d2d;
-        }
-    </style>
 </head>
 
 <body>
     <header>
+        <script src="chaesu.js" defer></script>
         <div class="nav-tabs-box">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
@@ -210,28 +138,6 @@
         </div>
     </header>
 
-
-    <script>
-        // JavaScript로 탭을 관리
-        function openTab(tabName) {
-            // 모든 탭 숨기기
-            var tabs = document.getElementsByClassName("custom-box");
-            for (var i = 0; i < tabs.length; i++) {
-                tabs[i].style.display = "none";
-            }
-            // 선택한 탭 표시
-            document.getElementById(tabName).style.display = "block";
-        }
-        let btns = document.querySelectorAll(".nav-link");
-        btns.forEach((selectedBtn) => {
-            selectedBtn.addEventListener("click", (e) => {
-                btns.forEach((btn) => {
-                    btn.classList.remove("active");
-                });
-                selectedBtn.classList.add("active");
-            });
-        });
-    </script>
 </body>
 
 </html>
