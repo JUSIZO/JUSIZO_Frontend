@@ -17,10 +17,12 @@
         height: 700px;
         background-color: antiquewhite;
       }
+      li {
+        list-style-type: none;
+      }
     </style>
   </head>
   <body>
-    <div class="guest-book"></div>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
@@ -50,12 +52,15 @@
         console.log(data.data());
       });
       const ul = document.createElement('ul');
+      ul.classList.add('guest-book');
       posts.forEach(post => {
         const li = document.createElement('li');
+        li.classList.add('post');
 
         const userNameElement = document.createElement('p');
         const userName = document.createTextNode(post['username']);
         userNameElement.appendChild(userName);
+        userNameElement.classList.add('user');
         li.appendChild(userNameElement);
 
         const dateElement = document.createElement('p');
@@ -69,16 +74,29 @@
         const dateNode = document.createTextNode(`${year}년 ${month}월 ${date}일 ${hours}:${minutes}`);
 
         dateElement.appendChild(dateNode);
+        dateElement.classList.add('date');
         li.appendChild(dateElement);
 
         const descriptionElement = document.createElement('p');
         const description = document.createTextNode(post['description']);
         descriptionElement.appendChild(description);
+        descriptionElement.classList.add('explain');
         li.appendChild(descriptionElement);
 
         ul.appendChild(li);
       });
       document.body.appendChild(ul);
     });
+
+    // 방명록 서버에 저장하기
+    // db.collection('guest-book').add({
+    //   username: "홍길동",
+    //   description: "날아간다아아아아",
+    //   date: new Date(),
+    // }).then(result => {
+    //   console.log(result);
+    // });
+
+
   </script>
 </html>
