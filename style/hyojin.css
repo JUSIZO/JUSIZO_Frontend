@@ -1,8 +1,4 @@
-* {
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-}
+
 body {
     margin: 0;
 }
@@ -87,9 +83,9 @@ body {
     height: 11px;
 }
 
-.info-1 .proscons {
+.info-1 .hyojinproscons {
     background-color: whitesmoke;
-    width: 470px;
+    width: 360px;
     height: 245px;
     box-shadow: 20px 10px;
     padding: 15px 20px 0px 20px;
@@ -117,6 +113,7 @@ body {
     z-index: -1;
     top: -48%;
     right: -60%;
+    width: 600px;
 }
 .ticket-box img {
     width: 400px;
@@ -129,8 +126,8 @@ body {
 }
 .user-link {
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: 40%;
+    left: 30%;
     transform: translate(-50%,-50%);
 }
 .user-link * {
@@ -172,13 +169,13 @@ body {
     background-size: cover;
     text-align: center;
     position: relative;
-    top: -65%;
+    top: -200%;
 }
 .footer-content span {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0 10px;
 }
 .footer-content p {
-    padding-top: 22px;
+    padding-top: 9px;
     font-size: 25px;
 }

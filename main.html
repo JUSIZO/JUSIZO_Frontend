@@ -11,6 +11,9 @@
 
         * {
             font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
         }
 
         .nav-tabs-box {
@@ -70,13 +73,13 @@
                     <a class="nav-link item0" aria-current="page" href="#a" onclick="openTab('tab1')">팀 소개</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link item1" href="#a" onclick="openTab('tab2')">영수</a>
+                    <a class="nav-link item1 youngsu-background-color" href="#a" onclick="openTab('tab2')">영수</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link item2" href="#a" onclick="openTab('tab3')">현정</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link item3 active hyojin-background-color" href="#a" onclick="openTab('tab4')">효진</a>
+                    <a class="nav-link item3 hyojin-background-color" href="#a" onclick="openTab('tab4')">효진</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link item4" href="#a" onclick="openTab('tab5')">채수</a>
@@ -95,10 +98,53 @@
             <p>This is the content of Tab 1.</p>
         </div>
 
-        <div id="tab2" class="custom-box" style="display: none">
-            <h3>Tab 2 Content</h3>
-            <p>This is the content of Tab 2.</p>
-        </div>
+        <article id="tab2" class="custom-box youngsu-background-color" style="display: none;">
+            <link rel="stylesheet" href="./style/youngsu.css" />
+            <div class="wrap">
+              <div class="card">
+                <div>
+                  <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2016%2F10%2F09%2F15%2F21%2Fbusiness-man-1725976_1280.png&type=a340" class="youngsu-profile-image" alt="프로필사진">
+                </div>
+                <div class="youngsuprofile">
+                  <h2>박영수</h2>
+                  <p>2000년 05월 30일</p>
+                </div>
+              </div>
+              <div class="wrap2">
+                <div class="wrap-2">
+                  <div class="youngsumbti">
+                    <div class="mbtilayout">
+                      <img src="./img/youngsu_1.png" alt="">
+                      <img src="./img/youngsu_2.png" alt="">
+                      <img src="./img/youngsu_3.png" alt="">
+                    </div>
+                    <div class="mbtilayout-2">
+                      <span>ISTJ</span>
+                    </div>
+                  </div>
+                  <div class="youngsuproscons">
+                    <div class="youngsupros">
+                      <p>장점</p>
+                      <span style="font-weight: 700;">상대방의 말을 잘 들어주고 시간 및 약속을 잘 지키며,
+                        입이 무거워서 다른 사람들에게 지인들의 비밀 이야기를 절대로 하지 않습니다.</span>
+                    </div>
+                    <div class="youngsucons">
+                      <p>단점</p>
+                      <span style="font-weight: 700;">낯가림이 심하고 말이 많지 않으며, 
+                        어떤 정보를 익히는 것에 있어 머리로 이해하는 것보다 직접 부딪혀야 이해가 더 빠릅니다.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="youngsustyle">
+                  <p>협업 스타일</p>
+                  <span style="font-weight: 700;">
+                    팀원 간에 싸움이 발생하지 않도록 항상 주의하고 상대방에게 최대한 말을 이쁘게 하려고 합니다. 그리고 작업하는데 문제가 발생하면 
+                    혼자 해결하는 것도 좋지만, 그게 힘들 경우 팀원들의 도움을 적극적으로 받으려고 합니다.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
 
         <div id="tab3" class="custom-box" style="display: none">
             <h3>Tab 3 Content</h3>
@@ -133,7 +179,7 @@
                                 <span>ISTP</span>
                             </div>
                         </div>
-                        <div class="proscons">
+                        <div class="hyojinproscons">
                             <div class="pros">
                                 <p>장점</p>
                                 <!-- 본인 장점 -->
@@ -196,7 +242,7 @@
                 <div class="info">
                     <div class="info-1">
                         <div class="chaesu-mbti">
-                            <div class="custom-layout">
+                            <div class="chaesucustom-layout">
                                 <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="12" cy="12" r="12" fill="#F74544" />
@@ -210,40 +256,39 @@
                                     <circle cx="12" cy="12" r="12" fill="#37C027" />
                                 </svg>
                             </div>
-                            <div class="layout-mbti">
+                            <div class="chaesulayout-mbti">
                                 <p>ISFJ</p>
                             </div>
                         </div>
-                        <div class="proscons">
+                        <div class="chaesuproscons">
                             <h4> 장점</h4>
                             <p> I지만 매우 밝고 긍정적입니다</p>
                             <h4> 단점 </h4>
                             <p> 부끄러움이 많아요</p>
                         </div>
                     </div>
-                    <div class="style">
+                    <div class="chaesustyle">
                         <p>협업스타일</p>
                         <span> 평화를 중요하게 생각합니다! 막히는게 있으면 최대한 물어보려고 많이 하는거 같습니다.</span>
                     </div>
                 </div>
 
-                <div class="ticket">
+                <div class="chaesuticket">
                     <div>
-                        <img class="ticketimg" src="./img/chaesu_ticket.svg" alt="">
+                        <img class="chaesuticketimg" src="./img/chaesu_ticket.svg" alt="">
                     </div>
 
-                    <div class="ticket-text">
+                    <div class="chaesuticket-text">
                         <p>GITHUB:</p>
                         <a href="https://github.com/Chasyuss"> https://github.com/Chasyuss</a>
-                    </div>
 
-                    <div class="velog-text">
                         <p>VELOG:</p>
                         <a href="https://velog.io/@cotn963/posts"> https://velog.io/@cotn963/posts</a>
+                    
                     </div>
                 </div>
 
-                <div class="role">
+                <div class="chaesurole">
                     <div>
                         <img class="role-img" src="./img/chaesu_role.svg">
                         <p>호응담당</p>
@@ -252,7 +297,7 @@
                 </div>
         </article>
 
-        <div id="tab6" class="jaehun custom-box" style="display: grid">
+        <div id="tab6" class="jaehun custom-box" style="display: none">
             <link rel="stylesheet" href="./style/jaehun.css" />
             <div class="card-box">
                 <div class="card front">
