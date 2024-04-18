@@ -45,14 +45,19 @@
     // 
     const db = firebase.firestore();
     let posts =[] ;
-    // 모든 데이터 가져오기
+    // DB에서 모든 post 가져오기
     db.collection('guest-book').get().then((result) => {
       result.forEach((data) => {
         posts.push(data.data());
         console.log(data.data());
       });
+      // posts에 data를 객체 형태로 저장.
+
+      // 데이터가 들어갈 ul 생성
       const ul = document.createElement('ul');
       ul.classList.add('guest-book');
+
+      // posts에서 post로 글을 하나씩 받아와 html태그로 변환.
       posts.forEach(post => {
         const li = document.createElement('li');
         li.classList.add('post');
@@ -68,8 +73,14 @@
         const year = datetime.getFullYear();
         const month = datetime.getMonth();
         const date = datetime.getDate();
-        const hours = datetime.getHours();
-        const minutes = datetime.getMinutes();
+        let hours = datetime.getHours();
+        if(hours === 0) {
+          hours = 12;
+        }
+        let minutes = datetime.getMinutes();
+        if(minutes < 10) {
+          minutes = "0" + minutes;
+        }
 
         const dateNode = document.createTextNode(`${year}년 ${month}월 ${date}일 ${hours}:${minutes}`);
 
@@ -87,16 +98,16 @@
       });
       document.body.appendChild(ul);
     });
-
-    // 방명록 서버에 저장하기
-    // db.collection('guest-book').add({
-    //   username: "홍길동",
-    //   description: "날아간다아아아아",
-    //   date: new Date(),
-    // }).then(result => {
-    //   console.log(result);
-    // });
-
-
+    // 방명록 DB에 저장하기
+    const postId = new Date().getTime().toString();
+    console.log("post id: ", postId);
+    db.collection('guest-book').doc(postId).set({
+      _id: postId,
+      username: "홍길동",
+      description: "날아간다아아아아",
+      date: new Date(),
+    });
+    // 방명록 DB에서 삭제하기 
+    db.collection('guest-book').doc("1713366540561").delete();
   </script>
 </html>
