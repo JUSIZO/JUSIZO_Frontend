@@ -231,6 +231,7 @@ header {
   z-index: -2;
   transform: translate(140%, 0);
   top: -250px;
+  left: 25px;
 }
 
 .component {
@@ -250,4 +251,25 @@ header {
 .hov:hover {
   transform: translateY(270px);
   transition: 0.5s;
+}
+
+.compo2 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: -310px;
+  left: 250px;
+}
+
+.com2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.component2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
