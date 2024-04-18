@@ -1,9 +1,4 @@
 /* 탭박스 중앙으로? */
-.nav-tabs-box li {
-  list-style-type: none;
-  background-color: white;
-}
-
 #tab7 {
   position: relative;
 }
