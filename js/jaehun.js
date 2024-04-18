@@ -18,12 +18,13 @@ btns.forEach((selectedBtn) => {
   });
 });
 
-// const cardReverseBtn = document.querySelector('.arrow-top');
-// console.log(cardReverseBtn);
+let adBanner = document.querySelector('.ad');
+let adCloseBtn = document.querySelector('.ad-close');
 
-// cardReverseBtn.addEventListener('mouseover', (e) => {
-//   console.log('onmouse!');
-// })
-// cardReverseBtn.addEventListener('mouseout', (e) => {
-//   console.log('mouseout!');
-// })
+adCloseBtn.addEventListener('click', () => {
+  adBanner.style.top = "-500px";
+  adBanner.style.opacity = 0;
+  setTimeout(() => {
+    adBanner.style.display= "none";
+  }, 1000)
+})
