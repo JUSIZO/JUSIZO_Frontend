@@ -133,14 +133,6 @@
           /* 임시 코드 */
           /* 임시 코드 */
 
-          .nav-tabs-box li:nth-child(1) a {
-            background-color: antiquewhite;
-          }
-
-          #tab1 {
-            background-color: antiquewhite;
-          }
-
 
           .nav-tabs-box .nav-link.active {
             border-bottom: none;
