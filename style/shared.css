@@ -49,13 +49,11 @@
           /* 임시 코드 */
           /* 임시 코드 */
 
-          .nav-tabs-box li:nth-child(1) a,
-          .nav-tabs-box li:nth-child(3) a,
-          .nav-tabs-box li:nth-child(7) a {
+          .nav-tabs-box li:nth-child(1) a {
             background-color: antiquewhite;
           }
 
-          #tab1, #tab3, #tab7 {
+          #tab1 {
             background-color: antiquewhite;
           }
 

@@ -13,7 +13,7 @@ body {
     background-color: #77B0AA;
 }
 
-.card {
+#tab4 .card {
     width: 310px;
     height: 470px;
     border: 3px solid black;
@@ -22,13 +22,13 @@ body {
     background-color: white;
 }
 
-.info-wrap {
+#tab4 .info-wrap {
     display: flex;
     flex-direction: row;
     margin-left: 15px;
 }
 
-.info {
+#tab4 .info {
     margin: 30px;
     margin-left: 40px;
     width: 800px;
@@ -36,10 +36,10 @@ body {
     display: flex;
     flex-direction: column;
 }
-.profile-title {
+#tab4 .profile-title {
     margin: 20px;
 }
-.profile-image {
+#tab4 .profile-image {
     width: 310px;
     height: 300px;
 }
@@ -96,7 +96,7 @@ body {
 .pros p, .cons p  {
     margin: 5px 0 ;
 }
-.style {
+#tab4 .style {
     margin-left: 30px;
     margin-top: 30px;
     background-color: whitesmoke;
