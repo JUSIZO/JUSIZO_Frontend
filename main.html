@@ -46,7 +46,7 @@
             <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
             <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
 
-            <article id="tab1" class="custom-box team-main main-background-color" style="display: none;">
+            <article id="tab1" class="custom-box team-main main-background-color" style="display: grid;">
                 <link rel="stylesheet" href="./style/main_page.css">
                 <div class="main-content-wrap">
                     <div class="main-logo-box">
@@ -88,6 +88,7 @@
                     </div>
                 </div>
             </article>
+
             <article id="tab2" class="custom-box youngsu-background-color" style="display: none">
                 <link rel="stylesheet" href="./style/youngsu.css" />
                 <div class="wrap">
@@ -369,75 +370,6 @@
                     </div>
             </article>
 
-            <article id="tab5" class="custom-box chaesu-card" style="display: grid">
-                <link rel="stylesheet" href="./style/chaesu.css" />
-                <div class="info-wrap">
-                    <div class="card">
-                        <div class="image-box">
-                            <img class="image" src="./img/chaesu_profile.svg" alt="">
-                        </div>
-                        <div class="profile-title">
-                            <h2>박채수</h2>
-                            <p>2000년 3월 15일</p>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <div class="info-1">
-                            <div class="chaesu-mbti">
-                                <div class="chaesucustom-layout">
-                                    <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="12" fill="#F74544" />
-                                    </svg>
-                                    <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="12" fill="#FAAD15" />
-                                    </svg>
-                                    <svg class="button" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="12" fill="#37C027" />
-                                    </svg>
-                                </div>
-                                <div class="chaesulayout-mbti">
-                                    <p>ISFJ</p>
-                                </div>
-                            </div>
-                            <div class="chaesuproscons">
-                                <h4> 장점</h4>
-                                <p> I지만 매우 밝고 긍정적입니다</p>
-                                <h4> 단점 </h4>
-                                <p> 부끄러움이 많아요</p>
-                            </div>
-                        </div>
-                        <div class="chaesustyle">
-                            <p>협업스타일</p>
-                            <span> 평화를 중요하게 생각합니다! 막히는게 있으면 최대한 물어보려고 많이 하는거 같습니다.</span>
-                        </div>
-                    </div>
-                    <div class="chaesuticket">
-                        <div>
-                            <img class="chaesuticketimg" src="./img/chaesu_ticket.svg" alt="">
-                        </div>
-
-                        <div class="chaesuticket-text">
-                            <p>GITHUB:</p>
-                            <a href="https://github.com/Chasyuss"> https://github.com/Chasyuss</a>
-
-                            <p>VELOG:</p>
-                            <a href="https://velog.io/@cotn963/posts"> https://velog.io/@cotn963/posts</a>
-
-                        </div>
-                    </div>
-
-                    <div class="chaesurole">
-                        <div>
-                            <img class="role-img" src="./img/chaesu_role.svg">
-                            <p>호응담당</p>
-                        </div>
-
-                    </div>
-            </article>
-
             <div id="tab6" class="jaehun custom-box" style="display: none">
                 <link rel="stylesheet" href="./style/jaehun.css" />
                 <div class="card-box">
@@ -475,100 +407,35 @@
                         신나고 즐거운 분위기에서 더 좋은 결과가 나올 수 있다고 생각하거든요.
                     </p>
                 </div>
+                <div class="badge-box">
+                  <div class="badge front">
+                      <div class="badge-pin"></div>
+                      <div class="badge-tag tag-front">
+                          <div class="badge-description">
+                              응원하기 <span>담당</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="badge back">
+                      <div class="badge-pin"></div>
+                      <div class="badge-tag tag-back">
+                          <div class="badge-description">
+                              응원하기 <span>담당</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="paper">
+                  <p class="site-name">깃허브</p>
+                  <a href="https://github.com/Chasyuss">https://github.com/Chasyuss</a>
+                  <p class="site-name">벨로그</p>
+                  <a href="https://velog.io/@cotn963/posts">https://velog.io/@cotn963/posts</a>
+              </div>
             </div>
-            <div class="badge-box">
-                <div class="badge front">
-                    <div class="badge-pin"></div>
-                    <div class="badge-tag tag-front">
-                        <div class="badge-description">
-                            응원하기 <span>담당</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="badge back">
-                    <div class="badge-pin"></div>
-                    <div class="badge-tag tag-back">
-                        <div class="badge-description">
-                            응원하기 <span>담당</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="paper">
-                <p class="site-name">깃허브</p>
-                <a href="https://github.com/Chasyuss">https://github.com/Chasyuss</a>
-                <p class="site-name">벨로그</p>
-                <a href="https://velog.io/@cotn963/posts">https://velog.io/@cotn963/posts</a>
-            </div>
+            
             </article>
 
-            <div id="tab6" class="jaehun custom-box" style="display: none">
-                <link rel="stylesheet" href="./style/jaehun.css" />
-                <div class="card-box">
-                    <div class="card front">
-                        <img class="profile-img" src="./img/jaehun02.JPG" alt="" />
-                        <p class="name">곽재훈</p>
-                        <p class="birth">1997년 12월 24일</p>
-                        <p class="job">직업: AKMU 팬</p>
-                    </div>
-                    <div class="card back"></div>
-                </div>
-                <div class="mbti">
-                    <div class="option-bar">
-                        <div class="option-bar-btn red"></div>
-                        <div class="option-bar-btn yellow"></div>
-                        <div class="option-bar-btn green"></div>
-                    </div>
-                    <div class="text">ENFJ</div>
-                </div>
-                <div class="proscons">
-                    <p class="p-title">장점</p>
-                    <p class="p-description">
-                        제 입으로 말하긴 웃기지만, 성격이 널널한 편입니다.<br />
-                        그리고 맡은 일은 끝까지 한다는 점?
-                    </p>
-                    <p class="p-title">단점</p>
-                    <p class="p-description">
-                        멘탈과 기억력이 나빠요. <br />에어팟을 끼고서 에어팟이 어디 갔는지
-                        자주 찾습니다.
-                    </p>
-                </div>
-                <div class="style">
-                    <p class="p-title">협업스타일</p>
-                    <p class="p-description">
-                        함께 일하는 것이 익숙하지는 않지만, 신나고 즐겁게 일하려고
-                        노력합니다.<br />
-                        신나고 즐거운 분위기에서 더 좋은 결과가 나올 수 있다고 생각하거든요.
-                    </p>
-                </div>
-                <div class="badge-box">
-                    <div class="badge front">
-                        <div class="badge-pin"></div>
-                        <div class="badge-tag tag-front">
-                            <div class="badge-description">
-                                응원하기 <span>담당</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="badge back">
-                        <div class="badge-pin"></div>
-                        <div class="badge-tag tag-back">
-                            <div class="badge-description">
-                                응원하기 <span>담당</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="paper">
-                    <p class="site-name">깃허브</p>
-                    <a href="https://github.com/KwakOri">https://github.com/KwakOri</a>
-                    <p class="site-name">벨로그</p>
-                    <a href="https://velog.io/@jh5414092/posts">https://velog.io/@jh5414092/posts</a>
-                </div>
-            </div>
-
-
-            <article id="tab7" class="custom-box background-color gahyeon" style="display: grid">
+            <article id="tab7" class="custom-box background-color gahyeon" style="display: none">
                 <link rel="stylesheet" href="./style/gahyeon.css">
                 <div class="info-wrap">
                     <div class="card gahyeon">
