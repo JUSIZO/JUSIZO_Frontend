@@ -3,8 +3,8 @@
     height: 600px;
     border: 3px solid black;
     box-shadow: 20px 10px;
-    margin: 420px 20px 50px;
-    background-color: #FFD0A1;
+    margin: 420px 20px 500px;
+    background-color: #c7c7c7;
     list-style-type: none;
     padding: 20px;
     overflow-y: auto;
@@ -35,7 +35,7 @@
     box-shadow: 10px 10px;
     padding: 20px;
     margin-top: 20px;
-}
+} 
 
 .showbtn {
     display: inline-block;

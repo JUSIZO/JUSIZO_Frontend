@@ -3,21 +3,13 @@
 
 /* 여기 입력해주세요 */
 
-/* #tab6 .pin-front {
-  background-color: ;
-}
-
 #tab6 .tag-front {
-  background-color: ;
-}
-
-#tab6 .pin-back {
-  background-color: ;
+  background-color: #FFDF39;
 }
 
 #tab6 .tag-back {
-  background-color: ;
-} */
+  background-color: #FFEE97;
+} 
 
 body {
   background-color: #f8f9fa;
@@ -48,7 +40,7 @@ body {
 header {
   position: relative;
   width: 1320px;
-  height: 700px;
+  height: 600px;
 }
 
 
