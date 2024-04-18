@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방명록</title>
+    <style>
+        .guest-book {
+            width: 1320px;
+            height: 600px;
+            border: 3px solid black;
+            box-shadow: 20px 10px;
+            margin: 20px 20px 50px;
+            background-color: #FFD0A1;
+            list-style-type: none;
+            padding: 20px;
+            overflow-y: auto; 
+        }
+
+        .post {
+            background-color: white;
+            border: 3px solid black;
+            width: 95%;
+            height: auto;
+            box-shadow: 10px 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .post p {
+            margin: 10px 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #F6DF67;
+            border: 2px solid black;
+            box-shadow: 2px 2px;
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .user {
+            float: left;
+        }
+
+        .date {
+            text-align: right;
+        }
+
+        .entry-form {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #F2F2F2;
+            border: 3px solid black;
+            width: 1200px;
+            box-shadow: 10px 10px;
+            margin: 50px; 
+        }
+
+        .entry-form .user{
+            padding: 10px 20px;
+            background-color: white;
+            border: 3px solid black;
+            box-shadow: 2px 2px;
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-bottom: 10px;
+
+        }
+
+        .entry-form .explain {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: white;
+            border: 3px solid black;
+            box-shadow: 2px 2px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="guest-book">
+        <a href="#" class="btn" id="showEntryForm"> 방명록 작성하기 </a>
+    </div>
+
+    <!-- 방명록 작성 폼 -->
+    <div class="entry-form" id="entryForm">
+        <h2>방명록 작성하기</h2>
+        <form id="submitForm">
+            <input class="user" type="text" name="username" placeholder="닉네임을 입력하세요."><br>
+            <textarea class="explain" name="message" placeholder="메시지를 입력하세요."></textarea><br>
+            <input class="btn" type="submit" value="등록하기">
+        </form>
+    </div>
+
+    <script>
+        // 방명록 작성하기 버튼 클릭 시 폼 보이기/감추기
+        document.getElementById('showEntryForm').addEventListener('click', function () {
+            var form = document.getElementById('entryForm');
+            if (form.style.display === 'none') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+
+        // 방명록 작성 폼 제출 시 처리
+        document.getElementById('submitForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // 폼의 기본 동작 중단
+
+            // 사용자 입력, 날짜, 방명록 내용 가져오기
+            var username = this.querySelector('input[name="username"]').value;
+            var message = this.querySelector('textarea[name="message"]').value;
+            var today = new Date();
+            var date = today.getFullYear() + '년 ' + (today.getMonth() + 1) + '월 ' + today.getDate() + '일';
+
+            // 새로운 방명록 요소 생성
+            var newEntry = document.createElement('div');
+            newEntry.classList.add('post');
+
+            // 사용자, 날짜, 내용 추가
+            var user = document.createElement('p');
+            user.classList.add('user');
+            user.textContent = username;
+            var dateElement = document.createElement('p');
+            dateElement.classList.add('date');
+            dateElement.textContent = date;
+            var explain = document            .createElement('p');
+            explain.classList.add('explain');
+            explain.textContent = message;
+
+            // 요소 추가
+            newEntry.appendChild(user);
+            newEntry.appendChild(dateElement);
+            newEntry.appendChild(explain);
+
+            // 방명록 목록에 추가
+            var guestBook = document.querySelector('.guest-book');
+            guestBook.appendChild(newEntry);
+
+            // 스크롤 조정
+            guestBook.scrollTop = guestBook.scrollHeight;
+
+            // 폼 초기화
+            this.reset();
+
+            // 폼 닫기
+            document.getElementById('entryForm').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
+
