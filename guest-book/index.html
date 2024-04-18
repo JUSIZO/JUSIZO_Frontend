@@ -22,13 +22,14 @@
       }
     </style>
   </head>
-  <body>
-  </body>
+  <body></body>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
   <script>
+    // 기본 세팅 코드 //
+    // 기본 세팅 코드 //
     const firebaseConfig = {
       apiKey: "AIzaSyCzNxdnZKBGObRbWt5gML4QxE-Q_vF5y_k",
       authDomain: "zusizo-web-site.firebaseapp.com",
@@ -38,76 +39,87 @@
       appId: "1:68338919855:web:8f35ce792e8fe33547e75a",
       measurementId: "G-TL8B0BGMG5",
     };
-
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
-    // 
     const db = firebase.firestore();
-    let posts =[] ;
+    let posts = [];
+    // 기본 세팅 코드 //
+    // 기본 세팅 코드 //
+
     // DB에서 모든 post 가져오기
-    db.collection('guest-book').get().then((result) => {
-      result.forEach((data) => {
-        posts.push(data.data());
-        console.log(data.data());
+    // DB에서 모든 post 가져오기
+    db.collection("guest-book")
+      .get()
+      .then((result) => {
+        result.forEach((data) => {
+          posts.push(data.data());
+          console.log(data.data());
+        });
+
+        const ul = document.createElement("ul");
+        ul.classList.add("guest-book");
+
+        posts.forEach((post) => {
+          const li = document.createElement("li");
+          li.classList.add("post");
+
+          const userNameElement = document.createElement("p");
+          const userName = document.createTextNode(post["username"]);
+          userNameElement.appendChild(userName);
+          userNameElement.classList.add("user");
+          li.appendChild(userNameElement);
+
+          const dateElement = document.createElement("p");
+          const datetime = new Date(post["date"]["seconds"] * 1000);
+          const year = datetime.getFullYear();
+          const month = datetime.getMonth();
+          const date = datetime.getDate();
+          let hours = datetime.getHours();
+          if (hours === 0) {
+            hours = 12;
+          }
+          let minutes = datetime.getMinutes();
+          if (minutes < 10) {
+            minutes = "0" + minutes;
+          }
+
+          const dateNode = document.createTextNode(
+            `${year}년 ${month}월 ${date}일 ${hours}:${minutes}`
+          );
+
+          dateElement.appendChild(dateNode);
+          dateElement.classList.add("date");
+          li.appendChild(dateElement);
+
+          const descriptionElement = document.createElement("p");
+          const description = document.createTextNode(post["description"]);
+          descriptionElement.appendChild(description);
+          descriptionElement.classList.add("explain");
+          li.appendChild(descriptionElement);
+
+          ul.appendChild(li);
+        });
+        document.body.appendChild(ul);
       });
-      // posts에 data를 객체 형태로 저장.
+    // DB에서 모든 post 가져오기
+    // DB에서 모든 post 가져오기
 
-      // 데이터가 들어갈 ul 생성
-      const ul = document.createElement('ul');
-      ul.classList.add('guest-book');
-
-      // posts에서 post로 글을 하나씩 받아와 html태그로 변환.
-      posts.forEach(post => {
-        const li = document.createElement('li');
-        li.classList.add('post');
-
-        const userNameElement = document.createElement('p');
-        const userName = document.createTextNode(post['username']);
-        userNameElement.appendChild(userName);
-        userNameElement.classList.add('user');
-        li.appendChild(userNameElement);
-
-        const dateElement = document.createElement('p');
-        const datetime = new Date(post['date']['seconds']*1000);
-        const year = datetime.getFullYear();
-        const month = datetime.getMonth();
-        const date = datetime.getDate();
-        let hours = datetime.getHours();
-        if(hours === 0) {
-          hours = 12;
-        }
-        let minutes = datetime.getMinutes();
-        if(minutes < 10) {
-          minutes = "0" + minutes;
-        }
-
-        const dateNode = document.createTextNode(`${year}년 ${month}월 ${date}일 ${hours}:${minutes}`);
-
-        dateElement.appendChild(dateNode);
-        dateElement.classList.add('date');
-        li.appendChild(dateElement);
-
-        const descriptionElement = document.createElement('p');
-        const description = document.createTextNode(post['description']);
-        descriptionElement.appendChild(description);
-        descriptionElement.classList.add('explain');
-        li.appendChild(descriptionElement);
-
-        ul.appendChild(li);
-      });
-      document.body.appendChild(ul);
-    });
+    // 방명록 DB에 저장하기
     // 방명록 DB에 저장하기
     const postId = new Date().getTime().toString();
     console.log("post id: ", postId);
-    db.collection('guest-book').doc(postId).set({
+    db.collection("guest-book").doc(postId).set({
       _id: postId,
       username: "홍길동",
       description: "날아간다아아아아",
       date: new Date(),
     });
-    // 방명록 DB에서 삭제하기 
-    db.collection('guest-book').doc("1713366540561").delete();
+    // 방명록 DB에 저장하기
+    // 방명록 DB에 저장하기
+
+    // 방명록 DB에서 삭제하기
+    // 방명록 DB에서 삭제하기
+    db.collection("guest-book").doc("1713366540561").delete();
+    // 방명록 DB에서 삭제하기
+    // 방명록 DB에서 삭제하기
   </script>
 </html>
