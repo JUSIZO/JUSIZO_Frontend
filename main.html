@@ -14,6 +14,11 @@
         <img src="./img/logo.png" alt="" />
     </div>
     <header>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
         <div class="nav-tabs-box">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
@@ -287,7 +292,25 @@
             <h3>Tab 7 Content</h3>
             <p>This is the content of Tab 7.</p>
         </div>
+
+         <link rel="stylesheet" href="./style/guestbook.css" />
+        <div class="guest-book" id="guestBook">
+            <!-- 방명록 등록 버튼 -->
+            <button class="btn" id="showEntryForm">방명록 작성하기</button>
+        </div>
+    
+        <!-- 방명록 작성 폼 -->
+        <div class="entry-form" id="entryForm" style="display: none;">
+            <h2>방명록 작성하기</h2>
+            <form id="submitForm">
+                <input class="user" type="text" name="username" placeholder="닉네임을 입력하세요."><br>
+                <textarea class="explain" name="message" placeholder="메시지를 입력하세요."></textarea><br>
+                <input class="btn" type="submit" value="등록하기">
+            </form>
+        </div>
+    
     </header>
 </body>
 <script src="./js/jaehun.js"></script>
+<script src="./js/guestbook.js"></script>
 </html>
