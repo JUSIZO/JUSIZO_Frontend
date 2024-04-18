@@ -15,7 +15,7 @@
             background-color: #FFD0A1;
             list-style-type: none;
             padding: 20px;
-            overflow-y: auto; 
+            overflow-y: auto;
         }
 
         .post {
@@ -53,6 +53,7 @@
 
         .user {
             float: left;
+            font-weight: bold;
         }
 
         .date {
@@ -67,10 +68,10 @@
             border: 3px solid black;
             width: 1200px;
             box-shadow: 10px 10px;
-            margin: 50px; 
+            margin: 50px;
         }
 
-        .entry-form .user{
+        .entry-form .user {
             padding: 10px 20px;
             background-color: white;
             border: 3px solid black;
@@ -83,7 +84,6 @@
             cursor: pointer;
             transition: transform 0.2s;
             margin-bottom: 10px;
-
         }
 
         .entry-form .explain {
@@ -93,14 +93,33 @@
             background-color: white;
             border: 3px solid black;
             box-shadow: 2px 2px;
-            
+        }
+
+        .delete-btn {
+            background-color: #F26767;
+            border: 2px solid black;
+            box-shadow: 2px 2px;
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            float: right;
+            margin-top: -15px;
+        }
+
+        .delete-btn:hover {
+            transform: translateY(-3px);
         }
     </style>
 </head>
 
 <body>
-    <div class="guest-book">
-        <a href="#" class="btn" id="showEntryForm"> 방명록 작성하기 </a>
+    <div class="guest-book" id="guestBook">
+        <button class="btn" id="showEntryForm">방명록 작성하기</button>
     </div>
 
     <!-- 방명록 작성 폼 -->
@@ -145,14 +164,23 @@
             var dateElement = document.createElement('p');
             dateElement.classList.add('date');
             dateElement.textContent = date;
-            var explain = document            .createElement('p');
+            var explain = document.createElement('p');
             explain.classList.add('explain');
             explain.textContent = message;
+
+            // 삭제 버튼 추가
+            var deleteBtn = document.createElement('button');
+            deleteBtn.textContent = '삭제';
+            deleteBtn.classList.add('delete-btn');
+            deleteBtn.addEventListener('click', function () {
+                newEntry.remove(); // 해당 방명록 항목 삭제
+            });
 
             // 요소 추가
             newEntry.appendChild(user);
             newEntry.appendChild(dateElement);
             newEntry.appendChild(explain);
+            newEntry.appendChild(deleteBtn); // 삭제 버튼 추가
 
             // 방명록 목록에 추가
             var guestBook = document.querySelector('.guest-book');
@@ -171,4 +199,3 @@
 </body>
 
 </html>
-
