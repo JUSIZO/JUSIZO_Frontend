@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Tabs Example</title>
+    <!-- 부트스트랩 CSS 링크 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 폰트 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/gahyeon.css">
+
+    <style>
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bolder;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-tabs-box">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" onclick="openTab('tab1')">Tab 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openTab('tab2')">Tab 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openTab('tab3')">Tab 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openTab('tab4')">Tab 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openTab('tab5')">Tab 5</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openTab('tab6')">Tab 6</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link gahyeon" href="#" onclick="openTab('tab7')">가현</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="tab1" class="custom-box">
+        <h3>Tab 1 Content</h3>
+        <p>This is the content of Tab 1.</p>
+    </div>
+
+    <div id="tab2" class="custom-box" style="display: none;">
+        <h3>Tab 2 Content</h3>
+        <p>This is the content of Tab 2.</p>
+    </div>
+
+    <div id="tab3" class="custom-box" style="display: none;">
+        <h3>Tab 3 Content</h3>
+        <p>This is the content of Tab 3.</p>
+    </div>
+
+    <div id="tab4" class="custom-box" style="display: none;">
+        <h3>Tab 4 Content</h3>
+        <p>This is the content of Tab 4.</p>
+    </div>
+
+    <div id="tab5" class="custom-box" style="display: none;">
+        <h3>Tab 5 Content</h3>
+        <p>This is the content of Tab 5.</p>
+    </div>
+
+    <div id="tab6" class="custom-box" style="display: none;">
+        <h3>Tab 6 Content</h3>
+        <p>This is the content of Tab 6.</p>
+    </div>
+
+
+    <article id="tab7" class="custom-box background-color gahyeon" style="display: none;">
+        <div class="info-wrap">
+            <div class="card gahyeon">
+                <div class="image box">
+                    <img src="C:\coding\team-project\JUSIZO_Frontend\image\me.jpg" class="image gahyeon">
+                </div>
+                <div class="profile gahyeon">
+                    <p> </p>
+                    <h2><strong>이가현</strong></h2>
+                    <p>1999년 2월 9일</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-1">
+            <div class="info-wrap"></div>
+            <div class="image box">
+                <img src="C:\coding\team-project\JUSIZO_Frontend\image\mbti-image.png" class="mbti gahyeon">
+            </div>
+            <div class="proscons gahyeon">
+                <div class="proscons gahyeon2">
+                    <h3><strong>장점</strong></h3>
+                    <p>꼼꼼합니다.<br>대~충 넘어가지 않고 끝까지 확인하고 한번 더 검토합니다! </p>
+                </div>
+                <div class="proscons gahyeon3">
+                    <h3><strong>단점</strong></h3>
+
+                    <p>확인의 확인을 하다 보니 해결하는 시간이 다소 소요됩니다.</p>
+                </div>
+                <div class="style gahyeon">
+                    <div class="style gahyeon2">
+                        <h3><strong>협업 스타일</strong></h3>
+                    </div>
+                    <div class="style gahyeon3">
+                        <p>팀원들끼리 편하게 이야기 할 수 있는 분위기를 선호합니다. <br>그래야 많은 대화를 나눌 수 있고 그 대화 속에서 엄청난 아이디어가 나온다고 믿습니다.(งᐛ)ว
+                            으쌰으쌰 (งᐖ )ว</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ticket gahyeon">
+                <div class="ticket-img">
+                    <img src="C:\coding\team-project\JUSIZO_Frontend\image\gahyeon-ticket.svg">
+                    <p class="github gahyeon">Github</p>
+                    <div class="github gahyeon2">
+                        <a href="https://github.com/Ga-zzang">https://github.com/Ga-zzang</a>
+                        <p class="velog gahyeon">Velog</p>
+                        <div class="velog gahyeon2">
+                            <a href="https://velog.io/@gazzanggu/posts">https://velog.io/@gazzanggu/posts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part-img" style="width: 500px; height: 200px;">
+                <img src="C:\coding\team-project\JUSIZO_Frontend\image\e.png">
+            </div>
+    </article>
+
+    <!-- 부트스트랩 JS 및 jQuery 라이브러리 링크 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript로 탭을 관리
+        function openTab(tabName) {
+            // 모든 탭 숨기기
+            var tabs = document.getElementsByClassName("custom-box");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            // 선택한 탭 표시
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
