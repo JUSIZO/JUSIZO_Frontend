@@ -1,5 +1,5 @@
 const blinds = document.querySelectorAll(".window-blind");
-const blindStep = ["12px", "62px", "112px", "162px", "212px"];
+const blindStep = ["14px", "64px", "114px", "164px", "214px"];
 const windowBox = document.querySelector(".window-box");
 const standardTimeInterval = 125;
 
