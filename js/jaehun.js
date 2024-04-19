@@ -18,11 +18,11 @@ btns.forEach((selectedBtn) => {
   });
 });
 
-let adBanner = document.querySelector('.ad');
+let adBanner = document.querySelector('.ad-area');
 let adCloseBtn = document.querySelector('.ad-close');
 
 adCloseBtn.addEventListener('click', () => {
-  adBanner.style.top = "-500px";
+  adBanner.style.height = 0;
   adBanner.style.opacity = 0;
   setTimeout(() => {
     adBanner.style.display= "none";

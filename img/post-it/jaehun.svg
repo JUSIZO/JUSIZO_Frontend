@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 520">
   <defs>
     <style>
       .cls-1 {
         fill: none;
       }
 
-      .cls-1, .cls-2, .cls-3 {
+      .cls-1, .cls-2 {
         stroke: #231f20;
         stroke-miterlimit: 10;
         stroke-width: 4px;
@@ -15,13 +15,8 @@
       .cls-2 {
         fill: #ffeaa0;
       }
-
-      .cls-3 {
-        fill: #000;
-      }
     </style>
   </defs>
-  <path class="cls-3" d="M20,20v500h31.08c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h28.92V20H20Z"/>
   <path class="cls-2" d="M10,10v500h31.08c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h60c0-16.57,13.43-30,30-30s30,13.43,30,30h28.92V10H10Z"/>
   <g>
     <rect class="cls-1" x="50" y="450" width="19.23" height="2"/>
