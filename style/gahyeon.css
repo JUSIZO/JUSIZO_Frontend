@@ -28,7 +28,7 @@
   height: 480px;
   border: 4px solid black;
   box-shadow: 20px 10px #1f1f1f;
-  margin: 20px;
+  margin: 30px;
   color: #000000;
   background-color: white;
   overflow: hidden;
@@ -62,7 +62,7 @@
 }
 
 .profile.gahyeon {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,23 +84,23 @@
 
 .proscons.gahyeon {
   position: relative;
-  left: 45px;
-  top: -510px;
+  left: -10px;
+  top: -530px;
   color: #000000;
   background-color: white;
   width: 470px;
-  height: 250px;
+  height: 220px;
   box-shadow: 20px 10px #1f1f1f;
-  padding: 20px;
+  padding: 10px;
 }
 
 .proscons.gahyeon3 {
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 .style.gahyeon {
   background-color: white;
-  width: 650px;
+  width: 500px;
   box-shadow: 20px 10px #1f1f1f;
   padding: 40px;
   margin: 70px;
