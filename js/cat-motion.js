@@ -19,26 +19,25 @@ let catAngryCount = 0;
 let currTime;
 const increaseWakeUpTime = () => {
   db.collection("cat")
-        .get()
-        .then(function (querySnapshot) {
-          querySnapshot.forEach(function (doc) {
-            console.log(doc.id, " => ", doc.data());
-            currTime = doc.data()['time'];
-            console.log(currTime);
-            db.collection("cat").doc("wakeUpTime").update({ "time": (Number(currTime) + 1) });
-          });
-        });
-
-      
-}
-
-increaseWakeUpTime();
+    .get()
+    .then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
+        console.log(doc.id, " => ", doc.data());
+        currTime = doc.data()["time"];
+        console.log(currTime);
+        db.collection("cat")
+          .doc("wakeUpTime")
+          .update({ time: Number(currTime) + 1 });
+      });
+    });
+};
 
 const catMove = () => {
   if (catAngryCount < 9) {
     catBody.style.top = `${catAngryCount * 40}px`;
     catAngryCount++;
   } else {
+    increaseWakeUpTime();
     catHand.classList.add("cursor-lock");
     catBody.style.animationName = "angrycat";
     setTimeout(() => {
@@ -46,18 +45,17 @@ const catMove = () => {
       catBody.style.animationName = "";
       catAngryCount = 0;
       catMove();
-      
     }, 4000);
   }
 };
 
-const animationStart = () => {
+const catAnimationStart = () => {
   catHand.classList.add("cursor-lock");
   catHand.classList.remove("pose-grab");
   catHand.classList.add("pose-spread");
 };
 
-const animationEnd = () => {
+const catAnimationEnd = () => {
   catHand.classList.remove("pose-spread");
   catHand.classList.add("pose-grab");
   catHand.classList.remove("cursor-lock");
@@ -90,13 +88,13 @@ const setTransition = (className, timeout, nextPos) => {
   setPos(nextPos);
   setTimeout(() => {
     catHand.classList.toggle(className);
-    animationEnd();
+    catAnimationEnd();
     catMove();
   }, timeout);
 };
 
 catHand.addEventListener("click", () => {
-  animationStart();
+  catAnimationStart();
 
   const currPos = getHandPos();
   const nextPos = getNewPos();

@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CWDangamAsac-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   position: relative;
@@ -123,6 +136,7 @@ header {
 }
 
 .badge-description {
+  font-family: 'PyeongChangPeace-Bold';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,7 +146,12 @@ header {
   font-weight: 700;
 }
 
+.badge-description span {
+  font-family: 'PyeongChangPeace-Bold'; 
+}
+
 .tag-back .badge-description {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,6 +281,7 @@ header {
 }
 
 .footer-bg {
+  position: relative;
   width: 100%;
   height: 300px;
   display: flex;
@@ -269,6 +289,15 @@ header {
   align-items: center;
   background-color: #FFDC61;
   margin-top: 100px;
+}
+
+.footer-article {
+  z-index: -2;
+  position: absolute;
+  top: -500px;
+  width: 400px;
+  height: 300px;
+  background-image: url('../img/window.svg');
 }
 
 footer {
@@ -313,3 +342,90 @@ footer a .footer-icon {
   position: absolute;
   left: 30px;
 }
+
+.toast-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: 70px;
+  z-index: -1;
+}
+
+.toaster {
+  cursor: pointer;
+  width: 300px;
+  height: 200px;
+  background-image: url('../img/toaster.svg');
+  z-index: 1;
+}
+
+.toast {
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top:0;
+  width: 180px;
+  height: 180px;
+  z-index: 0;
+  background-image: url('../img/toast.svg');
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+.toast-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.toast-title p {
+  color: #23201e;
+  font-family: 'PyeongChangPeace-Bold';
+}
+
+.toast-description {
+  font-family: 'PyeongChangPeace-Bold';
+  color: #23201e;
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+@keyframes toastJump {
+  0% {
+    top: 0;
+  }
+
+  30% {
+    top: 0;
+  }
+
+  35% {
+    top: -150px;
+  }
+
+  40% {
+    top: -130px;
+  }
+  90% {
+    top: -130px; 
+  }
+  100% {
+    top: 0;
+  }
+
+
+}
+
+.toast.jump {
+  top: -150px;
+}
+
