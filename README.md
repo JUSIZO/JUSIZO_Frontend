@@ -28,9 +28,9 @@
       <td align="center"><a href="https://github.com/youngsupark1"><img src="https://avatars.githubusercontent.com/u/160477257?v=4" width="100px;" alt=""/><br /><sub><b> 팀장 :박영수 </b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/KwakOri"><img src="https://avatars.githubusercontent.com/u/90024085?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 곽재훈 </b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/Chasyuss"><img src="https://avatars.githubusercontent.com/u/127167163?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 박채수 </b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/hyunjeongkwak"><img src="https://avatars.githubusercontent.com/u/161002090?v=4" width="100px;" alt=""/><br /><sub><b>FE 팀원 :곽현정 </b></sub></a><br /></td>
-        <td align="center"><a href="https://github.com/hyowls"><img src="https://avatars.githubusercontent.com/u/167041908?v=4" width="100px;" alt=""/><br /><sub><b>FE 팀원 : 김효진 </b></sub></a><br /></td>
-         <td align="center"><a href="https://github.com/Ga-zzang"><img src="https://avatars.githubusercontent.com/u/165372628?v=4" width="100px;" alt=""/><br /><sub><b>FE 팀원 : 이가현 </b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/hyunjeongkwak"><img src="https://avatars.githubusercontent.com/u/161002090?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 :곽현정 </b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/hyowls"><img src="https://avatars.githubusercontent.com/u/167041908?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 김효진 </b></sub></a><br /></td>
+         <td align="center"><a href="https://github.com/Ga-zzang"><img src="https://avatars.githubusercontent.com/u/165372628?v=4" width="100px;" alt=""/><br /><sub><b> 팀원 : 이가현 </b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
