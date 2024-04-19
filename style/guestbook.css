@@ -7,6 +7,7 @@
 }
 
 .guest-book {
+  z-index: 3;
   width: 1300px;
   height: 700px;
   border: 3px solid black;
@@ -82,9 +83,9 @@
 }
 
 .entry-form {
-  top: -500px;
-  z-index: -1;
-  position: relative;
+  bottom: 1000px;
+  z-index: 2;
+  position: absolute;
   display: block;
   margin-top: 20px;
   padding: 20px;
@@ -97,7 +98,7 @@
 }
 
 .entry-form.visible {
-  top: 0;
+  bottom: 400px;
 }
 
 .entry-form .user {

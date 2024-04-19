@@ -280,6 +280,43 @@ header {
   background-color: white;
 }
 
+.window-area {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window-box {
+  cursor: pointer;
+  position: relative; 
+  width: 400px;
+  height:300px;
+}
+
+.window-frame {
+  z-index: 0;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-image: url('../img/window.svg');
+}
+
+.window-blind {
+  position: absolute;
+  top: 14px;
+  width: 400px;
+  height: 54px;
+  background-image: url('../img/window-blind.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  z-index: 1;
+  transition: all 0.25s;
+}
+
 .footer-bg {
   position: relative;
   width: 100%;
@@ -288,16 +325,6 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #FFDC61;
-  margin-top: 100px;
-}
-
-.footer-article {
-  z-index: -2;
-  position: absolute;
-  top: -500px;
-  width: 400px;
-  height: 300px;
-  background-image: url('../img/window.svg');
 }
 
 footer {
@@ -422,11 +449,8 @@ footer a .footer-icon {
   100% {
     top: 0;
   }
-
-
 }
 
 .toast.jump {
   top: -150px;
 }
-
