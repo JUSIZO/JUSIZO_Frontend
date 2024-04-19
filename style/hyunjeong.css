@@ -1,13 +1,12 @@
 /* 여기 입력해주세요 */
 
 #tab3 .tag-front {
-  background-color: #79A4F8;
+  background-color: #79a4f8;
 }
 
 #tab3 .tag-back {
-  background-color: #A3C2FF;
-} 
-
+  background-color: #a3c2ff;
+}
 
 .tab-color {
   background-color: #ffc800;
@@ -27,6 +26,7 @@
   border: 3px solid black;
   box-shadow: 20px 20px;
   margin: 25px;
+  margin-top: 45px;
   background-color: white;
 }
 
@@ -51,6 +51,9 @@
 .frofile-txt {
   margin-left: 20px;
   margin-top: 20px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
 }
 
 .name {
@@ -63,13 +66,14 @@
   font-size: 20px;
   text-align: start;
   margin: 10px;
-  font-weight: 700;
+  left: 5px;
+  font-weight: 800;
 }
 
 .up {
   width: 800px;
   height: 280px;
-  margin-top: 5px;
+  margin-top: 33px;
   margin-bottom: 15px;
   margin-left: 30px;
   display: flex;
