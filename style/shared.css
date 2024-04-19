@@ -261,9 +261,55 @@ header {
   background-color: white;
 }
 
-footer {
-  background-color: #ffee8b;
+.footer-bg {
   width: 100%;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFDC61;
   margin-top: 100px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #FFDC61;
+  max-width: 1320px;
+  width: 100%;
+  height: 300px;
+}
+
+footer p {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 64px;
+
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+footer a .footer-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.footer-logo {
+  object-fit: cover;
+  width: 235px;
+  height: 235px;
+  position: absolute;
+  left: 30px;
 }
