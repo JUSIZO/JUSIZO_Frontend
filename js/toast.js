@@ -32,7 +32,7 @@ toaster.addEventListener('click', async () => {
   console.log(time);
   setTimeout(() => {
     toasterSwitch.classList.toggle("working");    
-  }, 3600) 
+  }, 1200) 
   setTimeout(() => {
     toastAnimationEnd();
   }, 4000)
