@@ -1,4 +1,5 @@
 const toaster = document.querySelector('.toaster');
+const toasterSwitch = document.querySelector('.toaster-switch');
 const toast = document.querySelector('.toast');
 const toastText = document.querySelector('.toast-description');
 
@@ -17,6 +18,7 @@ const getCatWakeUpTime = () => {
 const toastAnimationStart = () => {
   toaster.classList.add("cursor-lock");
   toast.style.animationName = "toastJump";
+  toasterSwitch.classList.toggle("working");
 };
 
 const toastAnimationEnd = () => {
@@ -28,6 +30,9 @@ toaster.addEventListener('click', async () => {
   toastAnimationStart();
   const time = getCatWakeUpTime();
   console.log(time);
+  setTimeout(() => {
+    toasterSwitch.classList.toggle("working");    
+  }, 3600) 
   setTimeout(() => {
     toastAnimationEnd();
   }, 4000)
