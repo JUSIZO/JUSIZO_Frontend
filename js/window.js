@@ -55,7 +55,6 @@ windowBox.addEventListener("click", (e) => {
   }
 });
 
-const weatherAPIKey = "bd874e49c4308593a42d4a450a4689a5";
 const windowFrame = document.querySelector(".window-frame");
 const sunnySrc = "./img/gif/sunny40.gif";
 const rainySrc = "./img/gif/rainy05.gif";
@@ -89,7 +88,15 @@ const setWeather = (weather) => {
   }
 };
 
-const getWeather = () => {
+const getWeather = async () => {
+  let weatherAPIKey = '';
+  await db.collection("secret")
+  .get()
+  .then(function (querySnapshot) {
+    querySnapshot.forEach(function (doc) {
+      weatherAPIKey = doc.data().key;
+    });
+  });
   const lat = 37.5672135; //위도
   const lon = 127.0016985; //경도
   const lang = "en"; //언어
