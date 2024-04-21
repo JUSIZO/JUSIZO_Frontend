@@ -1,21 +1,21 @@
-navigator.geolocation.getCurrentPosition(function (pos) {
-  console.log(pos);
-  var latitude = pos.coords.latitude;
-  var longitude = pos.coords.longitude;
-  alert("현재 위치는 : " + latitude + ", " + longitude);
-});
-
 const blinds = document.querySelectorAll(".window-blind");
-const blindStep = ["14px", "64px", "114px", "164px", "214px"];
+const blindStep = ["14px", "64px", "114px", "164px", "214px"]
+;
 const windowBox = document.querySelector(".window-box");
 const standardTimeInterval = 125;
 
 const windowAnimationStart = () => {
   windowBox.classList.add("cursor-lock");
+  terus.forEach((teru) => {
+    teru.classList.add("cursor-lock");
+  });
 };
 
 const windowAnimationEnd = () => {
   windowBox.classList.remove("cursor-lock");
+  terus.forEach((teru) => {
+    teru.classList.remove("cursor-lock");
+  });
 };
 
 const closeBlinds = () => {
@@ -118,18 +118,6 @@ const teruFace01 = "./img/teruteru/face01.svg";
 const teruFace02 = "./img/teruteru/face02.svg";
 const teruFace03 = "./img/teruteru/face03.svg";
 
-const teruAnimationStart = () => {
-  terus.forEach((teru) => {
-    teru.classList.add("cursor-lock");
-  });
-};
-
-const teruAnimationEnd = () => {
-  terus.forEach((teru) => {
-    teru.classList.remove("cursor-lock");
-  });
-};
-
 const pullTeru = (teru) => {
   teru.style.top = "0px";
   teru.childNodes[3].classList.remove("face02");
@@ -157,7 +145,7 @@ const terus = document.querySelectorAll(".teruteru");
 
 terus.forEach((teru) => {
   teru.addEventListener("click", () => {
-    teruAnimationStart();
+    windowAnimationStart();
     const nextWeather = teru.dataset.weather;
     resetTeru();
     pullTeru(teru);
@@ -169,14 +157,14 @@ terus.forEach((teru) => {
         setWeather(nextWeather);
       }, 1000);
       setTimeout(() => {
-        teruAnimationEnd();
+        windowAnimationEnd();
       }, 2000);
     } else {
       openBlinds();
       setWeather(nextWeather);
       windowBox.classList.toggle("closed");
       setTimeout(() => {
-        teruAnimationEnd();
+        windowAnimationEnd();
       }, 1000);
     }
   });
