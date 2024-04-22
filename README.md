@@ -9,7 +9,7 @@
 
 ## ✨ 링크
 
-- [JUSIZO](http://jh5414092.dothome.co.kr/)
+- [JUSIZO](http://jh5414092.dothome.co.kr/web-page/jusizo-first-project/index.html)
 
 ## ⏲️ 개발 기간
 
